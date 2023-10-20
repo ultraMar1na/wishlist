@@ -65,6 +65,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 36px;
 	color: #eae7ae;
+	margin-bottom: 60px;
 }
 
 .text-content ul ul {
@@ -83,12 +84,13 @@ img {
 	border-radius: 8px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 	.top-content {
 		overflow: hidden;
 	}
 	.text-content {
 		font-size: 24px;
+		margin-bottom: 30px;
 	}
 
 	.text-content ul ul {

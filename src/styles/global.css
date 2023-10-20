@@ -15,22 +15,9 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -41,97 +28,85 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
+	background: #645b4f;
 }
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
+
+.top-content {
 	width: 100%;
-	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #645b4f;
+	padding: 0 24px;
+	box-sizing: border-box;
 }
-input {
-	font-size: 16px;
+
+.october-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-table {
+
+
+.top-content img {
+	max-width: 1400px;
 	width: 100%;
 }
+
+.top-content  .wishlist-title {
+	max-width: 1400px;
+	width: 60%;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.text-content {
+	font-family: 'Nunito', sans-serif;
+	font-size: 36px;
+	color: #eae7ae;
+}
+
+.text-content ul ul {
+	font-size: 24px;
+}
+
+.text-content a,
+.text-content a:hover,
+.text-content a:active {
+	color: #eae7ae;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
+
 @media (max-width: 720px) {
-	body {
-		font-size: 18px;
+	.top-content {
+		overflow: hidden;
 	}
-	main {
-		padding: 1em;
+	.text-content {
+		font-size: 24px;
+	}
+
+	.text-content ul ul {
+		font-size: 16px;
+	}
+
+	.top-content img {
+		width: 100%;
+	}
+
+	.october-image img {
+		width: calc(100% + 75px);
+	}
+
+	.top-content  .wishlist-title {
+		width: 90%;
+		margin-top: 50px;
+		margin-bottom: 20px;
 	}
 }
 

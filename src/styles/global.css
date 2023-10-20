@@ -68,7 +68,7 @@ body {
 	margin-bottom: 60px;
 }
 
-.text-content ul ul {
+.text-content ul {
 	font-size: 24px;
 }
 
@@ -82,6 +82,27 @@ img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
+}
+
+input[type="checkbox"] {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.text-content input + label:before {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background-image: url("../wishlist/icons/checkbox-empty.svg");
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+
+.text-content input:checked + label:before {
+	background-image: url("../wishlist/icons/checkbox.svg");
 }
 
 @media (max-width: 768px) {
@@ -109,6 +130,13 @@ img {
 		width: 90%;
 		margin-top: 50px;
 		margin-bottom: 20px;
+	}
+
+	.text-content input + label:before {
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+		background-size: 26px;
 	}
 }
 

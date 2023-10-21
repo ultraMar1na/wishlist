@@ -68,8 +68,13 @@ body {
 	margin-bottom: 60px;
 }
 
+.text-content label {
+	cursor: pointer;
+}
+
 .text-content ul {
 	font-size: 24px;
+	margin-left: 30px;
 }
 
 .text-content a,

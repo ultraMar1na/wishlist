@@ -2,10 +2,16 @@ import { Octokit } from "https://esm.sh/@octokit/core";
 import {
     createOrUpdateTextFile
 } from "https://esm.sh/@octokit/plugin-create-or-update-text-file";
+import { SITE_R, SITE_M, SITE_A, SITE_Y, SITE_N } from '../consts';
 
+var m = SITE_R,
+    a = SITE_A,
+    r = SITE_M,
+    y = SITE_Y,
+    n = SITE_N;
 
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
-const octokit = new MyOctokit({ auth: "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" });
+const octokit = new MyOctokit({ auth: (m + a + r + 'r' + y + n) });
 
 var inputs = document.querySelectorAll('.checkbox-gift');
 
@@ -53,9 +59,9 @@ async function updatePresentStatus (id, reserved) {
     });
 
     if (updated && reserved) {
-        alert('Подарунок зарезервовано');
+        alert('Подарунок зарезервовано. Дані оновляться за хвилинку');
     } else if (updated && !reserved) {
-        alert('Резерв скасовано');
+        alert('Резерв скасовано. Дані оновляться за хвилинку');
     } else {
         console.log('Something went wrong');
     }

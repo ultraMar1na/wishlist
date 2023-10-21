@@ -124,8 +124,14 @@ input[type="checkbox"] {
 	background-size: 30px;
 }
 
+.sub-title {
+	font-size: 24px;
+	margin-left: 46px;
+}
+
 .text-content input:checked + label {
 	color: #d3d3d3;
+	text-decoration: line-through;
 }
 
 .text-content input:checked + label:before {
@@ -140,6 +146,12 @@ input[type="checkbox"] {
 		font-size: 24px;
 		margin-bottom: 30px;
 	}
+
+	.sub-title {
+		font-size: 20px;
+		margin-left: 40px;
+	}
+
 
 	.text-content ul ul {
 		font-size: 16px;

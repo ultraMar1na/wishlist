@@ -23,6 +23,11 @@ inputs.forEach(function(elem) {
             isConfirmed = confirm("Ви підтверджуєте резерв?");
 
             if (isConfirmed) {
+                if (event.currentTarget.id === "20") {
+                    alert('Подарунок зарезервовано. Але шмоток мало не буває, тому чекбокс лишиться пустим) Чмок');
+                    return event.currentTarget.checked = false;
+                }
+
                 updatePresentStatus(event.currentTarget.id, true);
             } else {
                 event.currentTarget.checked = false;
@@ -67,7 +72,7 @@ async function updatePresentStatus (id, reserved) {
         repo: 'wishlist',
         path: "gifts/" + id+ ".txt",
         content: reserved ? "yes" : "no",
-        message: 'Gift status update',
+        message: 'Gift Status Update',
     });
 
     if (updated && reserved) {

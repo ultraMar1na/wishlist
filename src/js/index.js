@@ -13,16 +13,28 @@ var m = SITE_R,
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
 const octokit = new MyOctokit({ auth: (m + a + r + 'r' + y + n) });
 
-var inputs = document.querySelectorAll('.checkbox-gift');
+var inputs = document.querySelectorAll('.checkbox-gift'), isConfirmed;
 
 inputs.forEach(function(elem) {
     getPresentStatus(elem);
 
     elem.addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
-            updatePresentStatus(event.currentTarget.id, true);
+            isConfirmed = confirm("Ви підтверджуєте резерв?");
+
+            if (isConfirmed) {
+                updatePresentStatus(event.currentTarget.id, true);
+            } else {
+                event.currentTarget.checked = false;
+            }
         } else {
-            updatePresentStatus(event.currentTarget.id, false);
+            isConfirmed = confirm("Ви підтверджуєте скасування резерву?");
+
+            if (isConfirmed) {
+                updatePresentStatus(event.currentTarget.id, false);
+            }  else {
+                event.currentTarget.checked = true;
+            }
         }
     });
 })

@@ -5,7 +5,7 @@ import {
 
 
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
-const octokit = new MyOctokit({ auth: "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" });
+const octokit = new MyOctokit({ auth: "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" });
 
 var inputs = document.querySelectorAll('.checkbox-gift');
 
@@ -14,17 +14,14 @@ inputs.forEach(function(elem) {
 
     elem.addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
-            console.log('checked', event.currentTarget.id);
             updatePresentStatus(event.currentTarget.id, true);
         } else {
-            console.log('not checked', event.currentTarget.id);
             updatePresentStatus(event.currentTarget.id, false);
         }
     });
 })
 
 async function getPresentStatus (elem) {
-    console.log(elem.id);
     if(!elem) {
         return;
     }
@@ -41,8 +38,6 @@ async function getPresentStatus (elem) {
     if (result.data.size === 3) {
         elem.checked = true;
     }
-
-    console.log(result);
 }
 
 async function updatePresentStatus (id, reserved) {
@@ -52,7 +47,7 @@ async function updatePresentStatus (id, reserved) {
     } = await octokit.createOrUpdateTextFile({
         owner: 'ultraMar1na',
         repo: 'wishlist',
-        path: "gifts/test.txt",
+        path: "gifts/" + id+ ".txt",
         content: reserved ? "yes" : "no",
         message: 'gift status update',
     });

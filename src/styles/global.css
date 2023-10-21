@@ -101,6 +101,10 @@ input[type="checkbox"] {
 	background-size: 30px;
 }
 
+.text-content input:checked + label {
+	color: #d3d3d3;
+}
+
 .text-content input:checked + label:before {
 	background-image: url("../wishlist/icons/checkbox.svg");
 }

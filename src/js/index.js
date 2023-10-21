@@ -5,7 +5,7 @@ import {
 
 
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
-const octokit = new MyOctokit({ auth: "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" });
+const octokit = new MyOctokit({ auth: "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" });
 
 var inputs = document.querySelectorAll('.checkbox-gift');
 

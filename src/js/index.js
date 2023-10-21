@@ -67,7 +67,7 @@ async function updatePresentStatus (id, reserved) {
         repo: 'wishlist',
         path: "gifts/" + id+ ".txt",
         content: reserved ? "yes" : "no",
-        message: 'gift status update',
+        message: 'Gift status update',
     });
 
     if (updated && reserved) {

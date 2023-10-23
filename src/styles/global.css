@@ -119,7 +119,7 @@ input[type="checkbox"] {
 	width: 30px;
 	height: 30px;
 	margin-right: 10px;
-	background-image: url("../icons/checkbox-empty.svg");
+	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox-empty.svg");
 	background-repeat: no-repeat;
 	background-size: 30px;
 }
@@ -139,7 +139,7 @@ input[type="checkbox"] {
 }
 
 .text-content input:checked + label:before {
-	background-image: url("../icons/checkbox.svg");
+	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox.svg");
 }
 
 @media (max-width: 768px) {

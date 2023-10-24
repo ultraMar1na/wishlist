@@ -133,7 +133,8 @@ input[type="checkbox"] {
 .text-content input:checked ~ div,
 .text-content input:checked ~ ul ,
 .text-content input:checked ~ ul a,
-.text-content input:checked ~ div a {
+.text-content input:checked ~ div a,
+.text-content input:checked + label a {
 	color: #d3d3d3;
 	text-decoration: line-through;
 }

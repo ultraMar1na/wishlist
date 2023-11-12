@@ -17,18 +17,27 @@
 }
 
 body {
-	font-family: 'Nunito', sans-serif;
+	font-family: 'ZCOOL XiaoWei', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: #27124B;
 	font-size: 20px;
 	line-height: 1.7;
-	background: #645b4f;
+	background-color: #faf7ff;
+}
+
+.hero-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #27124B;
+	padding: 0 24px;
+	box-sizing: border-box;
 }
 
 .top-content {
@@ -37,17 +46,41 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #645b4f;
 	padding: 0 24px;
 	box-sizing: border-box;
 }
 
-.october-image {
+.main-banner {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 5% 0;
 }
 
+.main-banner img {
+	width: 50%;
+}
+
+.main-banner-text {
+	font-family: 'ZCOOL XiaoWei', sans-serif;
+	font-size: 5vw;
+	line-height: 1;
+	color: #FFB855;
+	text-align: center;
+}
+
+.title-text {
+	font-family: 'ZCOOL XiaoWei', sans-serif;
+	font-size: 8vw;
+	line-height: 1;
+	text-align: center;
+	color: #27124B;
+	padding: 44px 0 64px;
+}
+
+.title-text.white {
+	color: white;
+}
 
 .top-content img {
 	max-width: 1400px;
@@ -68,17 +101,16 @@ body {
 	margin-bottom: 50px;
 }
 
-.top-content  .party-guys {
+.party-guys {
 	max-width: 1400px;
-	width: 60%;
-	margin-top: 50px;
-	margin-bottom: 250px;
+	width: 50%;
+	margin-top: 80px;
+	margin-bottom: 200px;
 }
 
 .party-text {
-	font-family: 'Nunito', sans-serif;
 	font-size: 42px;
-	color: #eae7ae;
+	color: #fff;
 	display: grid;
 	grid-template-columns: auto auto;
 	column-gap: 36px;
@@ -86,10 +118,8 @@ body {
 }
 
 .text-content {
-	font-family: 'Nunito', sans-serif;
 	font-size: 36px;
-	color: #eae7ae;
-	margin-bottom: 60px;
+	margin-bottom: 150px;
 }
 
 .text-content label {
@@ -104,7 +134,7 @@ body {
 .text-content a,
 .text-content a:hover,
 .text-content a:active {
-	color: #eae7ae;
+	color: #27124B;
 }
 
 img {
@@ -120,14 +150,7 @@ input[type="checkbox"] {
 }
 
 .text-content input + label:before {
-	content: '';
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	margin-right: 10px;
-	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox-empty.svg");
-	background-repeat: no-repeat;
-	background-size: 30px;
+	content: '❄   ';
 }
 
 .sub-title {
@@ -155,12 +178,18 @@ input[type="checkbox"] {
 	}
 	.text-content {
 		font-size: 24px;
-		margin-bottom: 30px;
+		margin-top: 10px;
+		margin-bottom: 75px;
 	}
 
 	.sub-title {
 		font-size: 20px;
 		margin-left: 40px;
+	}
+
+	.title-text {
+		font-size: 40px;
+		padding: 30px 0;
 	}
 
 
@@ -172,8 +201,12 @@ input[type="checkbox"] {
 		width: 100%;
 	}
 
-	.october-image img {
-		width: calc(100% + 75px);
+	.main-banner {
+		padding: 40px 0;
+	}
+
+	.main-banner img {
+		width: 70%;
 	}
 
 	.top-content  .party-title,
@@ -183,23 +216,16 @@ input[type="checkbox"] {
 		margin-bottom: 20px;
 	}
 
-	.top-content .party-guys {
-		width: 90%;
-		margin-bottom: 150px;
-		margin-top: 25px;
+	.party-guys {
+		width: 70%;
+		margin-bottom: 100px;
+		margin-top: 50px;
 	}
 
 	.party-text {
 		font-size: 28px;
 		column-gap: 20px;
 		row-gap: 10px;
-	}
-
-	.text-content input + label:before {
-		width: 24px;
-		height: 24px;
-		margin-right: 10px;
-		background-size: 26px;
 	}
 }
 

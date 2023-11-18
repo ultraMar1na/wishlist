@@ -59,6 +59,7 @@ body {
 
 .main-banner img {
 	width: 50%;
+	animation: float 2s infinite ease-in-out;
 }
 
 .main-banner-text {
@@ -158,19 +159,19 @@ input[type="checkbox"] {
 	margin-left: 46px;
 }
 
-.text-content input:checked + label,
-.text-content input:checked ~ div,
-.text-content input:checked ~ ul ,
-.text-content input:checked ~ ul a,
-.text-content input:checked ~ div a,
-.text-content input:checked + label a {
-	color: #d3d3d3;
-	text-decoration: line-through;
-}
+/*.text-content input:checked + label,*/
+/*.text-content input:checked ~ div,*/
+/*.text-content input:checked ~ ul ,*/
+/*.text-content input:checked ~ ul a,*/
+/*.text-content input:checked ~ div a,*/
+/*.text-content input:checked + label a {*/
+/*	color: #d3d3d3;*/
+/*	text-decoration: line-through;*/
+/*}*/
 
-.text-content input:checked + label:before {
-	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox.svg");
-}
+/*.text-content input:checked + label:before {*/
+/*	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox.svg");*/
+/*}*/
 
 @media (max-width: 768px) {
 	.top-content {
@@ -245,4 +246,10 @@ input[type="checkbox"] {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
 }

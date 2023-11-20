@@ -208,7 +208,8 @@ input[type="checkbox"] {
 	}
 
 	.main-banner img {
-		width: 70%;
+		width: 80%;
+		padding-bottom: 15px;
 	}
 
 	.top-content  .party-title,

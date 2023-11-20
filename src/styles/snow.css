@@ -412,6 +412,7 @@
     border-radius: 50%;
     position: absolute;
     top: -5vh;
+    z-index: 5;
 }
 
 @keyframes snowfall {

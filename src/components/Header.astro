@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header>
 	<nav>
 		<div class="internal-links">
-			<img src="/wishlist/valentine/logo.png" width="120" alt="Be my Valentine" />
+			<img class="logo" src="/wishlist/valentine/logo.png" width="120" alt="Be my Valentine" />
 		</div>
 	</nav>
 </header>
@@ -54,6 +54,10 @@ import { SITE_TITLE } from '../consts';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+
+		header .logo {
+		    max-width: 80px;
 		}
 	}
 </style>

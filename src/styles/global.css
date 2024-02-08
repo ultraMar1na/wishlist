@@ -23,10 +23,10 @@ body {
 	text-align: left;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: #27124B;
+	color: #224052;
 	font-size: 20px;
 	line-height: 1.7;
-	background-color: #faf7ff;
+	/*background-color: #faf7ff;*/
 	overflow-x: hidden;
 }
 
@@ -36,9 +36,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #27124B;
+	background: #FFF5F5;
 	padding: 0 24px;
 	box-sizing: border-box;
+	border-bottom: 4px solid #FFC3D0;
 }
 
 .top-content {
@@ -49,6 +50,7 @@ body {
 	align-items: center;
 	padding: 0 24px;
 	box-sizing: border-box;
+	border-bottom: 4px solid #FFC3D0;
 }
 
 .main-banner {
@@ -56,12 +58,19 @@ body {
 	flex-direction: column;
 	align-items: center;
 	padding: 5% 0;
+
+
 }
 
 .main-banner img {
-	width: 50%;
-	animation: float 2s infinite ease-in-out;
+	width: 55%;
+	border-radius: 40px;
 }
+
+/*.main-banner img {*/
+/*	width: 50%;*/
+/*	animation: float 2s infinite ease-in-out;*/
+/*}*/
 
 .main-banner-text {
 	font-family: 'ZCOOL XiaoWei', sans-serif;
@@ -76,7 +85,7 @@ body {
 	font-size: 8vw;
 	line-height: 1;
 	text-align: center;
-	color: #27124B;
+	color: #BB1A34;
 	padding: 44px 0 64px;
 }
 
@@ -112,7 +121,6 @@ body {
 
 .party-text {
 	font-size: 42px;
-	color: #fff;
 	display: grid;
 	grid-template-columns: auto auto;
 	column-gap: 36px;
@@ -134,9 +142,12 @@ body {
 }
 
 .text-content a,
-.text-content a:hover,
 .text-content a:active {
-	color: #27124B;
+	color: #224052;
+}
+
+.text-content a:hover {
+	color: #BB1A34;
 }
 
 img {
@@ -152,7 +163,8 @@ input[type="checkbox"] {
 }
 
 .text-content input + label:before {
-	content: '❄   ';
+	content: '❤   ';
+	color: #BB1A34;
 }
 
 .sub-title {

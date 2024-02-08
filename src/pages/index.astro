@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LocalScripts from '../components/LocalScripts.astro';
-import Snow from '../components/Snow.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -17,11 +16,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header title={SITE_TITLE} />
 		<div class="hero-content">
 		    <div class="main-banner">
-		        <Snow />
-		        <img src="/wishlist/dragon.png" alt="New Year"/>
-		        <div class="main-banner-text">
-		            Happy New Year<br>2024
-		        </div>
+		        <img src="/wishlist/valentine/banner.png" alt="Love"/>
 		    </div>
 		</div>
 		<div class="top-content">
@@ -51,14 +46,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                               <li><a href="https://e-pandora.ua/" target="_blank">Pandora</a></li>
                             </ul>
                     </div>
-                    <div>
-                        <input type="checkbox" id="25" name="25" class="checkbox-gift"  />
-                        <label for="25">Картриджи для Instax Mini (будь-які окрім білих)</label>
-                    </div>
 
                     <div>
                         <input type="checkbox" id="33" name="33" class="checkbox-gift"  />
-                        <label for="25">Ящик Dr Pepper Cherry</label>
+                        <label for="25">Ящик Dr Pepper</label>
                     </div>
 
                     <div>
@@ -72,24 +63,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     </div>
                     <div>
                         <input type="checkbox" id="60" name="60" class="checkbox-gift" />
-                            <label for="60"><a target="_blank" href="https://www.instagram.com/reel/Cz3RM3aMyeT/?utm_source=ig_web_copy_link&igshid=ODhhZWM5NmIwOQ==">Сумка Tosyo FAv 04</a></label>
+                            <label for="60">Спортивна сумка (через плече)</label>
                         </div>
                     </ul>
 		        </div>
 		    </div>
-		    <div class="hero-content">
-		        <div class="title-text white">
+		   <!-- <div class="hero-content">
+		        <div class="title-text">
                     Party
                 </div>
 
 		        <div class="party-text">
+		        I hope)
 		            <div>Date:</div><div>31.12.2023</div>
 		            <div>Place:</div><div>Zhytomyr</div>
 		            <div>Time:</div><div>18:00</div>
 		        </div>
 
 		        <img class="party-guys" src="/wishlist/new-party.png" alt="us"/>
-		</div>
+		</div>-->
 		<Footer />
 	</body>
 </html>

@@ -36,10 +36,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #FFF5F5;
+	background: #CB4F4F;
 	padding: 0 24px;
 	box-sizing: border-box;
-	border-bottom: 4px solid #FFC3D0;
+	border-bottom: 4px solid #FC9C2C;
 }
 
 .top-content {
@@ -50,7 +50,7 @@ body {
 	align-items: center;
 	padding: 0 24px;
 	box-sizing: border-box;
-	border-bottom: 4px solid #FFC3D0;
+	border-bottom: 4px solid #FC9C2C;
 }
 
 .main-banner {
@@ -63,8 +63,7 @@ body {
 }
 
 .main-banner img {
-	width: 55%;
-	border-radius: 40px;
+	width: 75%;
 }
 
 /*.main-banner img {*/
@@ -85,7 +84,7 @@ body {
 	font-size: 8vw;
 	line-height: 1;
 	text-align: center;
-	color: #BB1A34;
+	color: #FC9C2C;
 	padding: 44px 0 64px;
 }
 
@@ -147,7 +146,7 @@ body {
 }
 
 .text-content a:hover {
-	color: #BB1A34;
+	color: #FC9C2C;
 }
 
 img {
@@ -164,7 +163,7 @@ input[type="checkbox"] {
 
 .text-content input + label:before {
 	content: '❤   ';
-	color: #BB1A34;
+	color: #FC9C2C;
 }
 
 .sub-title {
@@ -185,6 +184,12 @@ input[type="checkbox"] {
 /*.text-content input:checked + label:before {*/
 /*	background-image: url("https://ultramar1na.github.io/wishlist/icons/checkbox.svg");*/
 /*}*/
+
+@media (min-width: 1024px) {
+	.hero-content {
+		min-height: 100vh;
+	}
+}
 
 @media (max-width: 768px) {
 	.top-content {
@@ -215,13 +220,13 @@ input[type="checkbox"] {
 		width: 100%;
 	}
 
-	.main-banner {
-		padding: 40px 0;
+	.main-banner,
+	.hero-content {
+		padding: 0;
 	}
 
 	.main-banner img {
 		width: 100%;
-		padding-bottom: 15px;
 	}
 
 	.top-content  .party-title,

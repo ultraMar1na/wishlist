@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Snow from '../components/Snow.astro';
 import LocalScripts from '../components/LocalScripts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -14,87 +15,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<div class="banner-wrapper">
-		    <div class="banner-main">
-		        <img src="/wishlist/birthday/26-banner.jpg" alt="Wishlist"/>
-		    </div>
+			<Snow />
+			<div class="banner-main">
+				<img src="/wishlist/birthday/26-banner.jpg" alt="Wishlist"/>
+			</div>
 		</div>
 		<div class="wishlist-wrapper">
 			<div class="wishlist-grid">
-				<div class="wishlist-item">
-					<div class="item-image">
-						<img src="/wishlist/birthday/beetle.png" alt="Cloth" width="400" height="400"/>
-					</div>
-					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-beetle" name="item-beetle" class="checkbox-gift"  />
-						<svg viewBox="0 0 35.6 35.6">
-							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-						</svg>
-					</div>
-					<div class="item-text">
-						<label for="item-beetle">Volkswagen Beetle</label>
-					</div>
-				</div>
-
-				<div class="wishlist-item">
-					<div class="item-image">
-						<img src="/wishlist/birthday/parfum.png" alt="Cloth" width="400" height="400"/>
-					</div>
-					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-parfume" name="item-parfume" class="checkbox-gift"  />
-						<svg viewBox="0 0 35.6 35.6">
-							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-						</svg>
-					</div>
-					<div class="item-text">
-                    	<label for="item-parfume"><a href="https://www.unusual.com.ua/product-category/parfume/" target="_blank">Парфуми від Unusual:</a><br/>
-							<span class="small-text">Йеннефер, Ґеральт, Драко Мелфой, Green tea (маленькі)</span>
-						</label>
-					</div>
-                </div>
-
-				<div class="wishlist-item">
-					<div class="item-image">
-						<img src="/wishlist/birthday/bag.png" alt="Bag" width="400" height="400"/>
-					</div>
-					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-bag" name="item-bag" class="checkbox-gift"  />
-						<svg viewBox="0 0 35.6 35.6">
-							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-						</svg>
-						<div class="tile-overview"></div>
-					</div>
-					<div class="item-text">
-						<label for="item-bag">
-							<a href="https://www.instagram.com/zori.bag/" target="_blank">Сумка Vela від Zori</a>
-						</label>
-					</div>
-				</div>
-
-
-				<div class="wishlist-item">
-					<div class="item-image">
-						<img src="/wishlist/birthday/sherlock.png" alt="Cloth" width="420" height="400"/>
-					</div>
-					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-sherlock" name="item-sherlock" class="checkbox-gift"  />
-						<svg viewBox="0 0 35.6 35.6">
-							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-						</svg>
-						<div class="tile-overview"></div>
-					</div>
-					<div class="item-text">
-						<label for="item-sherlock"><a target="_blank" href="https://geekach.com.ua/sherlok.-3-v-1.-nabir-5/">Настільна гра Шерлок</a></label>
-					</div>
-				</div>
-
 				<div class="wishlist-item wide-item">
 					<div class="item-image">
 						<img src="/wishlist/birthday/cloth.png" alt="Cloth" width="500" height="333"/>
@@ -104,110 +31,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<div class="text-content">
 								<div class="sub-title">речі/магазини що мені подобаються:</div>
 								<ul class="multiple-point">
-									<li>
-										<label for="item-hoodie-hearts">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-hoodie-hearts" name="item-hoodie-hearts" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/p/C8lwBeLiwRI/" target="_blank">Худі з сердечками</a> від roomovaa<br>
-										</label>
-									<!--</li>-->
-									<!--<li>-->
-									<!--	<label for="item-bekhtir">-->
-									<!--		<div class="mini-checkbox-wrapper">-->
-									<!--			<input type="checkbox" id="item-bekhtir" name="item-bekhtir" class="checkbox-gift"  />-->
-									<!--			<svg viewBox="0 0 35.6 35.6">-->
-									<!--				<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>-->
-									<!--				<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>-->
-									<!--				<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>-->
-									<!--			</svg>-->
-									<!--		</div>-->
-									<!--		Комбіновані і екстракомбіновані сорочки від <a href="https://bekhtir.com/product-category/sorochky-ekstrakombinovani/" target="_blank">Bekhtir</a>-->
-									<!--	</label>-->
-									<!--</li>-->
-									<!--<li>-->
-									<!--	<label for="item-dragon">-->
-									<!--		<div class="mini-checkbox-wrapper">-->
-									<!--			<input type="checkbox" id="item-dragon" name="item-dragon" class="checkbox-gift"  />-->
-									<!--			<svg viewBox="0 0 35.6 35.6">-->
-									<!--				<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>-->
-									<!--				<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>-->
-									<!--				<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>-->
-									<!--			</svg>-->
-									<!--		</div>-->
-									<!--		<a href="https://www.instagram.com/iamaesthetics.tech" target="_blank">Худі від I Am Aesthetics</a>-->
-									<!--	</label>-->
-									<!--</li>-->
-									<li>
-										<label for="item-sweatshirt">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-sweatshirt" name="item-sweatshirt" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											Теплий світшот в світлих кольорах
-										</label>
-									</li>
-									<li>
-										<label for="item-termo">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-termo" name="item-termo" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											Термокофта
-										</label>
-									</li>
-									<li>
-										<label for="item-flame">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-flame" name="item-flame" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/flameofdesire.com.ua" target="_blank">Flame of desire (напр. худі SHEEP молочний або кроп-топ)</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-trench">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-trench" name="item-trench" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/p/Crd_jpBsNYs/?img_index=2" target="_blank">Тренч</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-tosyo">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-tosyo" name="item-tosyo" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											Спортивний костюм
-										</label>
-									</li>
 									<li>
 										<label for="item-booriva">
 											<div class="mini-checkbox-wrapper">
@@ -222,16 +45,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 										</label>
 									</li>
 									<li>
-										<label for="item-lina">
+										<label for="item-bekhtir">
 											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-lina" name="item-lina" class="checkbox-gift"  />
+												<input type="checkbox" id="item-bekhtir" name="item-bekhtir" class="checkbox-gift"  />
 												<svg viewBox="0 0 35.6 35.6">
 													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
 													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
 													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
 												</svg>
 											</div>
-											<a href="https://linamalina.com.ua/" target="_blank">LinaMalina</a>
+											Світшоти / Cорочки від <a href="https://bekhtir.com/" target="_blank">Bekhtir</a>
+										</label>
+									</li>
+									<li>
+										<label for="item-td">
+											<div class="mini-checkbox-wrapper">
+												<input type="checkbox" id="item-td" name="item-td" class="checkbox-gift"  />
+												<svg viewBox="0 0 35.6 35.6">
+													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+												</svg>
+											</div>
+											<a href="https://www.instagram.com/td_25_/reels/?locale=dehttps%3A%2F555ten.com%2F%3Flocale%3Ddehttps%3A%2F%2F555ten.com%2F&hl=am-et" target="_blank">td_25</a>
+										</label>
+									</li>
+									<li>
+										<label for="item-flame">
+											<div class="mini-checkbox-wrapper">
+												<input type="checkbox" id="item-flame" name="item-flame" class="checkbox-gift"  />
+												<svg viewBox="0 0 35.6 35.6">
+													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+												</svg>
+											</div>
+											<a href="https://www.instagram.com/flameofdesire.com.ua" target="_blank">Flame of desire</a>
 										</label>
 									</li>
 									<li>
@@ -261,29 +110,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 										</label>
 									</li>
 									<li>
-										<label for="item-matiko">
+										<label for="item-hoodie-hearts">
 											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-matiko" name="item-matiko" class="checkbox-gift"  />
+												<input type="checkbox" id="item-hoodie-hearts" name="item-hoodie-hearts" class="checkbox-gift"  />
 												<svg viewBox="0 0 35.6 35.6">
 													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
 													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
 													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
 												</svg>
 											</div>
-											<a href="https://www.instagram.com/matiko_ua" target="_blank">Matiko</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-td">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-td" name="item-td" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/td_25_/reels/?locale=dehttps%3A%2F555ten.com%2F%3Flocale%3Ddehttps%3A%2F%2F555ten.com%2F&hl=am-et" target="_blank">td_25</a>
+											<a href="https://www.instagram.com/p/C8lwBeLiwRI/" target="_blank">Худі з сердечками</a> від roomovaa<br>
 										</label>
 									</li>
 									<!--<li>-->
@@ -391,73 +227,52 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 				<div class="wishlist-item">
 					<div class="item-image">
-						<img src="/wishlist/birthday/stander.png" alt="Flampic" width="400" height="400"/>
+						<img src="/wishlist/gift-default.png" alt="Table" width="400" height="400"/>
 					</div>
 					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-flampic" name="item-flampic" class="checkbox-gift"  />
+						<input type="checkbox" id="item-table" name="item-table" class="checkbox-gift"  />
 						<svg viewBox="0 0 35.6 35.6">
 							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
 							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
 							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
 						</svg>
-						<div class="tile-overview"></div>
 					</div>
 					<div class="item-text">
-						<label for="item-flampic"><a href="https://flampic.com.ua/shop/stander-classic-epoxy-1?variant=296" target="_blank">Підставка під телефон Flampic</a></label>
+						<label for="item-table"><a href="https://vash-stolik.site/" target="_blank">Столик або менажниця</a></label>
 					</div>
 				</div>
 
 				<div class="wishlist-item">
 					<div class="item-image">
-						<img src="/wishlist/birthday/dima.png" alt="Cloth" width="420" height="400"/>
+						<img src="/wishlist/gift-default.png" alt="Muse" width="400" height="400"/>
 					</div>
 					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-dima" name="item-dima" class="checkbox-gift"  />
+						<input type="checkbox" id="item-muse" name="item-muse" class="checkbox-gift"  />
 						<svg viewBox="0 0 35.6 35.6">
 							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
 							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
 							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
 						</svg>
-						<div class="tile-overview"></div>
 					</div>
 					<div class="item-text">
-						<label for="item-dima"><a target="_blank" href="https://geekach.com.ua/deni.-golosa-v-golove-dany/">Настільна гра Діма</a></label>
+						<label for="item-muse"><a href="https://www.instagram.com/reel/DDJtC0AtArj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Піжама Muse графітова</a></label>
 					</div>
 				</div>
 
-				<div class="wishlist-item order-fix">
+				<div class="wishlist-item">
 					<div class="item-image">
-						<img src="/wishlist/birthday/case.png" alt="Case" width="400" height="400"/>
+						<img src="/wishlist/gift-default.png" alt="Styler" width="400" height="400"/>
 					</div>
 					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-case" name="item-case" class="checkbox-gift"  />
+						<input type="checkbox" id="item-styler" name="item-styler" class="checkbox-gift"  />
 						<svg viewBox="0 0 35.6 35.6">
 							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
 							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
 							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
 						</svg>
-						<div class="tile-overview"></div>
 					</div>
 					<div class="item-text">
-						<label for="item-case"><a target="_blank" href="https://www.instagram.com/p/C2c4y80Lo5u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Чохол Кохати</a><br/>на iPhone 14 Pro</label>
-					</div>
-				</div>
-
-				<div class="wishlist-item order-fix">
-					<div class="item-image">
-						<img src="/wishlist/birthday/photo.png" alt="Photosession" width="400" height="400"/>
-					</div>
-					<div class="checkbox-wrapper">
-						<input type="checkbox" id="item-photo" name="item-photo" class="checkbox-gift"  />
-						<svg viewBox="0 0 35.6 35.6">
-							<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-							<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-							<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-						</svg>
-						<div class="tile-overview"></div>
-					</div>
-					<div class="item-text">
-						<label for="item-photo">Фотосесія</label>
+						<label for="item-styler"><a href="https://bt.rozetka.com.ua/ua/shark-hd450tleu/p459945114/" target="_blank">Стайлер</a></label>
 					</div>
 				</div>
 

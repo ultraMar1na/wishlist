@@ -1,0 +1,25 @@
+---
+const { name, text = '', linkUrl = '', image = '/wishlist/gift-default.png' } = Astro.props;
+---
+
+
+<div class="wishlist-item">
+    <div class="item-image">
+        <img src={image} alt={name} width="400" height="400"/>
+    </div>
+    <div class="checkbox-wrapper">
+        <input type="checkbox" id={`item-${name}`} name={`item-${name}`} class="checkbox-gift"  />
+        <svg viewBox="0 0 35.6 35.6">
+            <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+            <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+            <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+        </svg>
+    </div>
+    <div class="item-text">
+        <label for={`item-${name}`}>
+            {linkUrl && <a target="_blank" href={linkUrl}><span set:html={text}></span></a>}
+    
+            {!linkUrl && <span set:html={text}></span>}
+        </label>
+    </div>
+</div>

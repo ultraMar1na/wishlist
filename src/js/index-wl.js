@@ -1,24 +1,25 @@
 import { SUPABASE_KEY } from '../consts';
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://hwmwnleuebomgzsisjao.supabase.co'
+const supabaseUrl = 'https://vxyrwqjwvrynszqhzskk.supabase.co'
 const supabase = createClient(supabaseUrl, SUPABASE_KEY);
 
 async function readInitialData() {
-    let { data: wishlist_items, error } = await supabase
-        .from('wishlist_items')
+    let { data: items, error } = await supabase
+        .from('items')
         .select('*');
 
     if (error) {
         console.error('Error reading data:', error);
     } else {
-        for (let i = 0; i< wishlist_items.length; i++) {
-            var elem = document.getElementById(wishlist_items[i]['name']);
+        console.log(items);
+        for (let i = 0; i< items.length; i++) {
+            var elem = document.getElementById(items[i]['name']);
 
             if (elem) {
-                elem.checked = wishlist_items[i]['value'];
+                elem.checked = items[i]['value'];
 
-                console.log(wishlist_items[i]['name'], elem.closest('.wishlist-item, li'))
+                console.log(items[i]['name'], elem.closest('.wishlist-item, li'))
 
                 if (elem.checked) {
                     elem.closest('.wishlist-item, li').classList.add('item-checked');
@@ -34,7 +35,7 @@ async function readInitialData() {
 
 async function updatePresentStatus(id, reserved) {
     const { data, error } = await supabase
-        .from('wishlist_items')
+        .from('items')
         .update({ value: reserved })
         .eq('name', id)
         .select();
@@ -79,6 +80,7 @@ function eventHandlers() {
     inputs.forEach(function(input) {
         input.addEventListener('change', (event) => {
             if (event.currentTarget.checked) {
+                console.log(event);
                 isConfirmed = confirm("Ви підтверджуєте резерв?");
 
                 if (isConfirmed) {

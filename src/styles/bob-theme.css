@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(180deg, #75FCEB 0%, #75FCEB 300px, #038DDD 300px, #038DDD 100%);
+
+}
+
+.banner-wrapper-bg {
+    height: 500px;
+    background: url("/wishlist/spongebob/sky.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}

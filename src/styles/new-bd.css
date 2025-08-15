@@ -1,8 +1,8 @@
 :root {
-    --main-bg-color: #89414B;
-    --main-text-color: #422C37;
+    --main-bg-color: #0A7BCE;
+    --main-text-color: #fff;
     --secondary-text-color: #C4835B;
-    --secondary-bg-color: #e3dbcb21;
+    --secondary-bg-color: #ffffff33;
 }
 
 .hero-content {
@@ -134,7 +134,7 @@ body {
 .item-image {
     border: 4px solid var(--main-bg-color);
     border-radius: 16px;
-    padding: 10px 10px 80px;
+    padding: 20px 20px 80px;
     background-color: var(--secondary-bg-color);
     cursor: pointer;
     text-align: center;
@@ -146,7 +146,7 @@ body {
     width: 75%;
     height: auto;
     aspect-ratio: 1 / 1;
-    object-fit: contain;
+    object-fit: cover;
 
     transition: transform 0.3s linear;
 

@@ -4,7 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MainBannerBg from '../components/MainBannerBg.astro';
 import Item from '../components/Item.astro';
-// import Snow from '../components/Snow.astro';
+import BigItem from '../components/BigItem.astro';
+import BigSubItem from '../components/BigSubItem.astro';
 import LocalScripts from '../components/LocalScripts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -16,10 +17,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<MainBannerBg />
+		<MainBannerBg text="27 years later ..." />
 		<div class="wishlist-wrapper">
 			<div class="wishlist-grid">
-
 				<Item name="table" text="Столик або менажниця" linkUrl="https://vash-stolik.site/"  image="/wishlist/spongebob/table.jpg"/>
 
 				<Item name="tosyo" text="Сумка TOSYO W" image="/wishlist/spongebob/bag.jpg" linkUrl="https://www.instagram.com/p/DNF4dvcs6Fx/?igsh=MTJzaTRya3Rzbzdybw%3D%3D"/>
@@ -28,228 +28,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 				<Item name="styler" text="Автостайлер<br/>(Shark FlexStyle чи інший аналог)" image="/wishlist/spongebob/styler.jpg" />
 
-				<div class="wishlist-item wide-item">
-					<div class="item-image">
-						<!-- <img src="/wishlist/birthday/cloth.png" alt="Cloth" width="500" height="333"/> -->
+				<BigItem title="Одяг" subtitle="речі/магазини що мені подобаються:" aftertext="Мої параметри: 91 - 74 - 101<br/>Зріст: 170<br/>Взуття: 24.5см">
+					<BigSubItem name="cheburechna" title="Світер від cheburechna" link="https://www.instagram.com/reel/DEhmJnqNWtm/?igsh=dmRwc2Fqb3ZhM2Nu" />
+					<BigSubItem name="booriva" title="Booriva" link="https://www.booriva.com/in-stock/" />
+					<BigSubItem name="amos" title="Amoslook" link="https://www.instagram.com/amoslook/" />
+					<BigSubItem name="anve" title="Anvestudio" link="https://www.instagram.com/anvestudio/" />
+					<BigSubItem name="flame" title="Flame of desire" link="https://www.instagram.com/flameofdesire.com.ua" />
+					<BigSubItem name="rikky" title="Rikky Hype" link="https://rikkyhype.com/ua" />
+					<BigSubItem name="bekhtir" title="Світшоти / Cорочки від Bekhtir" link="https://bekhtir.com/" />
+					<BigSubItem name="gepur" title="Gepur" link="https://gepur.com/uk/" />
+				</BigItem>
 
-						<div class="item-text">
-							<label>Одяг</label>
-							<div class="text-content">
-								<div class="sub-title">речі/магазини що мені подобаються:</div>
-								<ul class="multiple-point">
-									<li>
-										<label for="item-cheburechna">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-cheburechna" name="item-cheburechna" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/reel/DEhmJnqNWtm/?igsh=dmRwc2Fqb3ZhM2Nu" target="_blank">Світер від cheburechna</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-booriva">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-booriva" name="item-booriva" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.booriva.com/in-stock/" target="_blank">Booriva</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-amos">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-amos" name="item-amos" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/amoslook/" target="_blank">Amoslook</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-anve">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-anve" name="item-anve" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/anvestudio/" target="_blank">Anvestudio</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-flame">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-flame" name="item-flame" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://www.instagram.com/flameofdesire.com.ua" target="_blank">Flame of desire</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-rikky">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-rikky" name="item-rikky" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://rikkyhype.com/ua" target="_blank">Rikky Hype</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-gepur">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-gepur" name="item-gepur" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://gepur.com/uk/" target="_blank">Gepur</a>
-										</label>
-									</li>
-									<li>
-										<label for="item-bekhtir">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-bekhtir" name="item-bekhtir" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											Світшоти / Cорочки від <a href="https://bekhtir.com/" target="_blank">Bekhtir</a>
-										</label>
-									</li>
-									<!--<li>-->
-									<!--	<label for="item-pitaya">-->
-									<!--		<div class="mini-checkbox-wrapper">-->
-									<!--			<input type="checkbox" id="item-pitaya" name="item-pitaya" class="checkbox-gift"  />-->
-									<!--			<svg viewBox="0 0 35.6 35.6">-->
-									<!--				<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>-->
-									<!--				<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>-->
-									<!--				<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>-->
-									<!--			</svg>-->
-									<!--		</div>-->
-									<!--		Купальник від <a href="https://www.instagram.com/reel/Cz52827NbHO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Pitaya</a> (як у дівчини на відео)-->
-									<!--	</label>-->
-									<!--</li>-->
-								</ul>
-								<div>Мої параметри: 91 - 74 - 101</div>
-								<div>Зріст: 170</div>
-								<div>Взуття: 24.5см</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<BigItem title="Прикраси (срібло, біжутерія)" subtitle="речі/магазини що мені подобаються:" aftertext="Розміри колечок:<br>Великий палець - 18.5,<br>Середній палець - 18.5,<br>Безіменний - 17.5">
+					<BigSubItem name="minimalist" title="Прикраси з Minimalist Jewelry" link="https://instagram.com/minimalist_jewelry?igshid=OGQ5ZDc2ODk2ZA==" />
+				</BigItem>
 
-				<div class="wishlist-item wide-item">
-					<div class="item-image">
-						<!-- <img src="/wishlist/spongebob/ring.jpg" alt="Jewelry" width="600" height="400"/> -->
-
-						<div class="item-text">
-							<label>Прикраси (срібло, біжутерія)</label>
-							<div class="text-content">
-								<div class="sub-title">речі/магазини що мені подобаються:</div>
-								<ul class="multiple-point">
-									<li>
-										<label for="item-minimalist">
-											<div class="mini-checkbox-wrapper">
-												<input type="checkbox" id="item-minimalist" name="item-minimalist" class="checkbox-gift"  />
-												<svg viewBox="0 0 35.6 35.6">
-													<circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-													<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-													<polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-												</svg>
-											</div>
-											<a href="https://instagram.com/minimalist_jewelry?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">Прикраси з Minimalist Jewelry</a>
-										</label>
-									</li>
-								</ul>
-								<div>Розміри колечок: <br>
-									Великий палець - 18.5,<br> Середній палець - 18.5,<br> Безіменний - 17.5</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="wishlist-item wide-item">
-					<div class="item-image">
-						<div class="item-text">
-							<label>Інші ідеї:</label>
-							<div class="text-content">
-								<ul class="multiple-point">
-									<li>
-										<div class="mini-checkbox-wrapper">
-											<svg viewBox="0 0 35.6 35.6">
-												<circle fill="#89414B" cx="17.8" cy="17.8" r="17.8"></circle>
-												<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-											</svg>
-										</div>
-										<label>
-											Тортик, тістечка, інші смаколики
-										</label>
-									</li>
-									<li>
-										<div class="mini-checkbox-wrapper">
-											<svg viewBox="0 0 35.6 35.6">
-												<circle fill="#89414B" cx="17.8" cy="17.8" r="17.8"></circle>
-												<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-											</svg>
-										</div>
-										<label>
-											Естетік піжамка
-										</label>
-									</li>
-									<li>
-										<div class="mini-checkbox-wrapper">
-											<svg viewBox="0 0 35.6 35.6">
-												<circle fill="#89414B" cx="17.8" cy="17.8" r="17.8"></circle>
-												<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-											</svg>
-										</div>
-										<label>
-											Одяг в спортзал (комбінезончики, лосіни, топи, рашгарди і тд)
-										</label>
-									</li>
-									<li>
-										<div class="mini-checkbox-wrapper">
-											<svg viewBox="0 0 35.6 35.6">
-												<circle fill="#89414B" cx="17.8" cy="17.8" r="17.8"></circle>
-												<circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-											</svg>
-										</div>
-										<label>
-											Відпочинок в будиночку з чаном
-										</label>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				<BigItem title="Інші ідеї:">
+					<BigSubItem name="cake" title="Тортик, тістечко, інші смаколики" />
+					<BigSubItem name="pijama" title="Естетік піжамка" />
+					<BigSubItem name="sport" title="Одяг в спортзал (комбінезончики, лосіни, топи, рашгарди і тд)" />
+					<BigSubItem name="house" title="Відпочинок в будиночку з чаном" />
+					<BigSubItem name="quest" title="Все що повʼязано з квестами: квеструм, квест-коробка, саморобний квест і тд" />
+				</BigItem>
 			</div>
-		    </div>
+		</div>
 		<Footer />
 	</body>
 </html>

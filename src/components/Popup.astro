@@ -1,0 +1,28 @@
+---
+const {id='', content='', bannerType='', banner, confirmText = 'Підтвердити', cancelText='Скасувати' } = Astro.props;
+var bannerImage = banner;
+
+if (!banner && bannerType == 'positive') {
+    bannerImage = '/wishlist/spongebob/happy.jpg';
+}
+
+if (!banner && bannerType == 'negative') {
+    bannerImage = '/wishlist/spongebob/sad.jpg';
+}
+---
+
+
+<div id={id} class="dialog-overlay">
+    <div class="dialog-content">
+      <div class="dialog-body">
+        <img src={bannerImage} alt="banner" />
+      </div>
+      <div class="dialog-footer">
+        <p>{content}</p>
+        <div>
+          <button class="confirm-button">{confirmText}</button>
+          <button class="cancel-button">{cancelText}</button>
+        </div>
+      </div>
+    </div>
+  </div>

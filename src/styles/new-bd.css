@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: #0A7BCE;
     --main-text-color: #fff;
-    --secondary-text-color: #C4835B;
+    --secondary-text-color: #FFE23E;
     --secondary-bg-color: #ffffff33;
 }
 
@@ -243,6 +243,7 @@ footer {
 .social-links a:hover {
     color: var(--secondary-text-color);
 }
+
 
 .sr-only {
     border: 0;

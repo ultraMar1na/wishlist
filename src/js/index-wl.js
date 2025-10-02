@@ -4,6 +4,8 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://vxyrwqjwvrynszqhzskk.supabase.co'
 const supabase = createClient(supabaseUrl, SUPABASE_KEY);
 
+var activeItem = null;
+
 async function readInitialData() {
     let { data: items, error } = await supabase
         .from('items')
@@ -59,6 +61,7 @@ function setCheckboxes() {
     let miniCheckboxes = document.querySelectorAll('.mini-checkbox-wrapper input');
     miniCheckboxes.forEach(function(elem) {
         elem.addEventListener('change', (event) => {
+            
             if (event.currentTarget.checked) {
                 event.currentTarget.closest('li').classList.add('item-checked');
             } else {
@@ -79,26 +82,51 @@ function eventHandlers() {
     let inputs = document.querySelectorAll('.wishlist-item input.checkbox-gift'), isConfirmed;
     inputs.forEach(function(input) {
         input.addEventListener('change', (event) => {
+            event.preventDefault();
+            activeItem = event.currentTarget.id;
             if (event.currentTarget.checked) {
-                console.log(event);
-                isConfirmed = confirm("Ви підтверджуєте резерв?");
-
-                if (isConfirmed) {
-                    updatePresentStatus(event.currentTarget.id, true);
-                } else {
-                    event.currentTarget.checked = false;
-                }
+                showPopup('#confirmDialog');
             } else {
-                isConfirmed = confirm("Ви підтверджуєте скасування резерву?");
-
-                if (isConfirmed) {
-                    updatePresentStatus(event.currentTarget.id, false);
-                }  else {
-                    event.currentTarget.checked = true;
-                }
+                showPopup('#cancelDialog');
             }
         })
     });
+
+    let confirmPopup = document.querySelector('#confirmDialog');
+    confirmPopup.querySelector('.confirm-button').addEventListener('click', function() {
+        updatePresentStatus(activeItem, true);
+        hidePopup('#confirmDialog');
+    });
+
+    confirmPopup.querySelector('.cancel-button').addEventListener('click', function() {
+        updatePresentStatus(activeItem, false);
+        hidePopup('#confirmDialog');
+
+        document.getElementById(activeItem).closest('li, .wishlist-item').classList.remove('item-checked');
+        document.getElementById(activeItem).checked = false;
+    });
+
+    let cancelPopup = document.querySelector('#cancelDialog');
+    cancelPopup.querySelector('.confirm-button').addEventListener('click', function() {
+        updatePresentStatus(activeItem, false);
+        hidePopup('#cancelDialog');
+    });
+
+    cancelPopup.querySelector('.cancel-button').addEventListener('click', function() {
+        hidePopup('#cancelDialog');
+
+        document.getElementById(activeItem).closest('li, .wishlist-item').classList.add('item-checked');
+        document.getElementById(activeItem).checked = true;
+    });
+
 }
 
+function showPopup (popup) {
+    var popup = document.querySelector(popup);
+    popup.style.display = 'flex';
+}
 
+function hidePopup (popup) {
+    var popup = document.querySelector(popup);
+    popup.style.display = 'none';  
+}

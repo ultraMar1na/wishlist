@@ -6,8 +6,10 @@ import MainBannerBg from '../components/MainBannerBg.astro';
 import Item from '../components/Item.astro';
 import BigItem from '../components/BigItem.astro';
 import BigSubItem from '../components/BigSubItem.astro';
+import BigSubItemSimple from '../components/BigSubItemSimple.astro';
 import LocalScripts from '../components/LocalScripts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Popup from '../components/Popup.astro';
 ---
 
 <!doctype html>
@@ -18,29 +20,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<MainBannerBg text="27 years later ..." />
+
 		<div class="wishlist-wrapper">
 			<div class="wishlist-grid">
 				<Item name="table" text="Столик або менажниця" linkUrl="https://vash-stolik.site/"  image="/wishlist/spongebob/table.jpg"/>
 
 				<Item name="tosyo" text="Сумка TOSYO W" image="/wishlist/spongebob/bag.jpg" linkUrl="https://www.instagram.com/p/DNF4dvcs6Fx/?igsh=MTJzaTRya3Rzbzdybw%3D%3D"/>
 
-				<Item name="tish" text="Кросівки від Tishelle" linkUrl="https://tishelle.com.ua/product-category/sneakers/" image="/wishlist/spongebob/shoes.jpg"/>
+				<Item name="tish" text="Кросівки від Tishelle" linkUrl="https://tishelle.com.ua/product-category/sneakers/" image="/wishlist/spongebob/shoes-2.jpg"/>
 
-				<Item name="styler" text="Автостайлер<br/>(Shark FlexStyle чи інший аналог)" image="/wishlist/spongebob/styler.jpg" />
+				<Item name="styler" text="Автостайлер<br/>(Shark FlexStyle або Philips SenseIQ чи інший аналог)" image="/wishlist/spongebob/styler.jpg" />
 
-				<BigItem title="Одяг" subtitle="речі/магазини що мені подобаються:" aftertext="Мої параметри: 91 - 74 - 101<br/>Зріст: 170<br/>Взуття: 24.5см">
-					<BigSubItem name="cheburechna" title="Світер від cheburechna" link="https://www.instagram.com/reel/DEhmJnqNWtm/?igsh=dmRwc2Fqb3ZhM2Nu" />
+				<Item name="cheburechna" text="Светр з надписом від cheburechna" linkUrl="https://www.instagram.com/cheburechna.ua/" image="/wishlist/spongebob/sweather.jpg"/>
+
+				<Item name="sport-siute" text="Спортивний комбез" linkUrl="https://lexie.com.ua/tproduct/533986576-564988142172-kombez-seams-long-v" image="/wishlist/spongebob/suite.jpg"/>
+
+				<Item name="suite" text="Трикотажний костюмчик або тільки кардиган" linkUrl="https://www.instagram.com/p/DPDieRoDetb/?utm_source=ig_web_copy_link&igsh=MWhiYjd6dDY1MjhndA==" image="/wishlist/spongebob/suite-2.jpg"/>
+
+				<Item name="crocs" text="Крокси" image="/wishlist/spongebob/shoes.jpg"/>
+
+				<BigItem title="Інший Одяг" subtitle="магазини що мені подобаються:" 
+					image="/wishlist/spongebob/cloth.jpg" aftertext="Мої параметри: 91 - 74 - 101<br/>Зріст: 170<br/>Взуття: 24.5см">
 					<BigSubItem name="booriva" title="Booriva" link="https://www.booriva.com/in-stock/" />
+					<BigSubItem name="hugme" title="Hugme" link="https://hugmebrand.com/" />
+					<BigSubItem name="fiore" title="Fiore" link="https://www.instagram.com/fiore.ua?igsh=MThmc25wbnoxc3Vrdw==" />
 					<BigSubItem name="amos" title="Amoslook" link="https://www.instagram.com/amoslook/" />
 					<BigSubItem name="anve" title="Anvestudio" link="https://www.instagram.com/anvestudio/" />
 					<BigSubItem name="flame" title="Flame of desire" link="https://www.instagram.com/flameofdesire.com.ua" />
 					<BigSubItem name="rikky" title="Rikky Hype" link="https://rikkyhype.com/ua" />
-					<BigSubItem name="bekhtir" title="Світшоти / Cорочки від Bekhtir" link="https://bekhtir.com/" />
 					<BigSubItem name="gepur" title="Gepur" link="https://gepur.com/uk/" />
 				</BigItem>
 
-				<BigItem title="Прикраси (срібло, біжутерія)" subtitle="речі/магазини що мені подобаються:" aftertext="Розміри колечок:<br>Великий палець - 18.5,<br>Середній палець - 18.5,<br>Безіменний - 17.5">
-					<BigSubItem name="minimalist" title="Прикраси з Minimalist Jewelry" link="https://instagram.com/minimalist_jewelry?igshid=OGQ5ZDc2ODk2ZA==" />
+				<BigItem title="Прикраси (срібло, біжутерія)" 
+				image="/wishlist/spongebob/jewelry.gif"
+				subtitle="речі/магазини що мені подобаються:" aftertext="Розміри колечок:<br>Великий палець - 18.5,<br>Середній палець - 18.5,<br>Безіменний - 17.5">
+					<BigSubItem name="minimalist" title="Minimalist Jewelry" link="https://instagram.com/minimalist_jewelry?igshid=OGQ5ZDc2ODk2ZA==" />
+					<BigSubItem name="dych" title="DYCH" link="https://danylevych.com/" />
 				</BigItem>
 
 				<BigItem title="Інші ідеї:">
@@ -53,5 +68,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</div>
 		</div>
 		<Footer />
+
+		<Popup id="confirmDialog" content="Ви підтверджуєте резерв?" bannerType="positive" confirmText="Так, звісно" cancelText="Hi"/>
+		<Popup id="cancelDialog" content="Ви підтверджуєте скасування резерву?" bannerType="negative" confirmText="Так" cancelText="Hi"/>
+
 	</body>
 </html>

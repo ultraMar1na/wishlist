@@ -1,5 +1,7 @@
 ---
-const { name, text = '', linkUrl = '', image = '/wishlist/gift-default.png' } = Astro.props;
+import SizeTooltip from '../components/SizeTooltip.astro';
+
+const { name, text = '', linkUrl = '', image = '/wishlist/gift-default.png', showSize=false } = Astro.props;
 ---
 
 
@@ -20,6 +22,7 @@ const { name, text = '', linkUrl = '', image = '/wishlist/gift-default.png' } = 
             {linkUrl && <a target="_blank" href={linkUrl}><span set:html={text}></span></a>}
     
             {!linkUrl && <span set:html={text}></span>}
+            {showSize && <SizeTooltip/>}
         </label>
     </div>
 </div>

@@ -72,14 +72,39 @@ body {
     margin: 40px;
     width: auto;
     flex-grow: 1;
-    max-width: 800px;
+    max-width: 90%;
     display: flex;
     gap: 40px;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+        max-width: 800px;
+        flex-direction: row;
+    }
 }
 
 .dialog-overlay .dialog-content img {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
+}
+
+.dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dialog-footer {
+    font-size: 24px;
+
+    @media (min-width: 900px) {
+        font-size: 26px;
+    }
+}
+
+.dialog-footer button {
+    font-size: 16px;
 }
 
 .item-text label {

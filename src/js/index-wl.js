@@ -14,14 +14,11 @@ async function readInitialData() {
     if (error) {
         console.error('Error reading data:', error);
     } else {
-        console.log(items);
         for (let i = 0; i< items.length; i++) {
             var elem = document.getElementById(items[i]['name']);
 
             if (elem) {
                 elem.checked = items[i]['value'];
-
-                console.log(items[i]['name'], elem.closest('.wishlist-item, li'))
 
                 if (elem.checked) {
                     elem.closest('.wishlist-item, li').classList.add('item-checked');

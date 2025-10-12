@@ -128,46 +128,48 @@ function hidePopup (popup) {
     popup.style.display = 'none';  
 }
 
-var tag = document.createElement('script');
+const wrapper = document.getElementById('videoWrapper');
+const btn = document.getElementById('playBtn');
+const iframe = document.getElementById('ytFrame');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+window.addEventListener('message', (e) => {
+    if (!e.data || typeof e.data !== 'string') return;
+    try {
+      const msg = JSON.parse(e.data);
+      // Check for video end
+      if (msg.event === 'onStateChange' && msg.info === 0) { // 0 = ended
+        hideVideo();
+      }
+    } catch {}
+  });
 
-var player;
+  // Load YT Player API (needed for postMessage control)
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
 
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-    videoId: '8UeMa7N_r0k', // your video ID
-    playerVars: {
-        autoplay: 1,
-        controls: 0,
-        rel: 0
-    },
-    events: {
-        'onStateChange': onPlayerStateChange
-    }
-    });
-}
+  // Create a player object when API ready
+  let player;
+  window.onYouTubeIframeAPIReady = () => {
+    player = new YT.Player('ytFrame');
+    console.log(player);
+  };
 
-const container = document.getElementById('player-container');
-const playBtn = document.getElementById('playBtn');
-
-// 2. Play video and go fullscreen
-playBtn.addEventListener('click', () => {
-    container.style.display = 'block';
+  btn.addEventListener('click', () => {
     if (!player) return;
+    wrapper.style.display = 'block';
+    requestFullscreen(wrapper);
     player.playVideo();
-    // request fullscreen
-    if (container.requestFullscreen) container.requestFullscreen();
-    else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
-    else if (container.msRequestFullscreen) container.msRequestFullscreen();
-});
+  });
 
-// 3. When video ends, hide player
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-    container.style.display = 'none';
-    document.exitFullscreen?.();
-    }
-}
+  function hideVideo() {
+    wrapper.style.display = 'none';
+    if (document.fullscreenElement) document.exitFullscreen();
+    player.stopVideo();
+  }
+
+  function requestFullscreen(el) {
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+  }

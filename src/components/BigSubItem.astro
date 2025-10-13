@@ -13,6 +13,6 @@ const { name='', title='', link = '' } = Astro.props;
             </svg>
         </div>
         { link && <a href={link} target="_blank" set:html={title}></a>}
-        { !link && <div>{title}</div>}
+        { !link && <div set:html={title}></div>}
     </label>
 </li>

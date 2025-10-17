@@ -115,11 +115,17 @@ function eventHandlers() {
         document.getElementById(activeItem).closest('li, .wishlist-item').classList.add('item-checked');
         document.getElementById(activeItem).checked = true;
     });
-
 }
 
 function showPopup (popup) {
-    var popup = document.querySelector(popup);
+    var popup = document.querySelector(popup),
+    img = popup.querySelector('img');
+
+    if (img) {
+        const randomNum = Math.floor(Math.random() * 10) + 1;
+        img.src = img.src.replace(/\/\d+\.jpg$/, `/${randomNum}.jpg`);
+      }
+
     popup.style.display = 'flex';
 }
 

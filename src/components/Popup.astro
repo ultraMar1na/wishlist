@@ -1,15 +1,13 @@
 ---
 const {id='', content='', bannerType='', banner, confirmText = 'Підтвердити', cancelText='Скасувати' } = Astro.props;
 var bannerImage = banner;
-const random = Math.floor(Math.random() * 10) + 1;
-
 
 if (!banner && bannerType === 'positive') {
-  bannerImage = `/wishlist/spongebob/happy/${random}.jpg`;
+  bannerImage = `/wishlist/spongebob/happy/1.jpg`;
 }
 
 if (!banner && bannerType === 'negative') {
-  bannerImage = `/wishlist/spongebob/sad/${random}.jpg`;
+  bannerImage = `/wishlist/spongebob/sad/1.jpg`;
 }
 ---
 

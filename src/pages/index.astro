@@ -23,32 +23,46 @@ import Popup from '../components/Popup.astro';
 
 		<div class="wishlist-wrapper">
 			<div class="wishlist-grid">
-				<Item name="tosyo" text="Одну з сумок TOSYO W / TAG 1 / TAG 2 / TAG 4" image="/wishlist/spongebob/bag.jpg" linkUrl="https://www.instagram.com/p/DNF4dvcs6Fx/?igsh=MTJzaTRya3Rzbzdybw%3D%3D"/>
+				<Item name="tosyo" text="Одну з сумок: TOSYO W / TAG 1 / TAG 2 / TAG 4" image="/wishlist/spongebob/bag.jpg" linkUrl="https://www.instagram.com/p/DNF4dvcs6Fx/?igsh=MTJzaTRya3Rzbzdybw%3D%3D"/>
 
 				<Item name="crocs" text="Крокси" image="/wishlist/spongebob/shoes.jpg" showSize=true/>
 
-				<Item name="cheburechna" text="Светр з надписом від cheburechna" showSize=true linkUrl="https://www.instagram.com/cheburechna.ua/" image="/wishlist/spongebob/sweather.jpg"/>
+				<!-- <Item name="cheburechna" text="Светр з надписом від cheburechna" showSize=true linkUrl="https://www.instagram.com/cheburechna.ua/" image="/wishlist/spongebob/sweather.jpg"/> -->
 
-				<Item name="sport-siute" text="Спортивний комбез" showSize=true linkUrl="https://lexie.com.ua/tproduct/533986576-564988142172-kombez-seams-long-v" image="/wishlist/spongebob/suite.jpg"/>
+				<!-- <Item name="sport-siute" text="Спортивний комбез" showSize=true linkUrl="https://lexie.com.ua/tproduct/533986576-564988142172-kombez-seams-long-v" image="/wishlist/spongebob/suite.jpg"/> -->
 
-				<Item name="long" text="Лонг на запах" showSize=true linkUrl="https://rikkyhype.com/ua/product/longsliv-zhinochij-z-dekolte-na-zapakh-grafitovij" image="/wishlist/spongebob/long.jpg"/>
+				<!-- <Item name="long" text="Лонг на запах" showSize=true linkUrl="https://rikkyhype.com/ua/product/longsliv-zhinochij-z-dekolte-na-zapakh-grafitovij" image="/wishlist/spongebob/long.jpg"/> -->
 
-				<Item name="long-2	" text="Лонг зі швами" showSize=true linkUrl="https://rikkyhype.com/ua/product/longsliv-z-dekorativnimi-shvami-po-figuri-shokoladnij" image="/wishlist/spongebob/zip.jpg"/>
+				<!-- <Item name="long-2" text="Лонг зі швами" showSize=true linkUrl="https://rikkyhype.com/ua/product/longsliv-z-dekorativnimi-shvami-po-figuri-shokoladnij" image="/wishlist/spongebob/zip.jpg"/> -->
 
 				<Item name="honey" text="Сет медовухи Карпат'як «Веселий дідько»" linkUrl="https://medovukha-karpatyak.online/" image="/wishlist/spongebob/honey.jpg"/>
 
 				<Item name="hammam" text="Гель для душу Hammam Mr.SCRUBBER" linkUrl="https://mrscrubber.ua/gel-dlia-dusu-hammam-mrscrubber" image="/wishlist/spongebob/bath-2.jpg"/>
 				
-				<Item name="deeply" text="Шампунь, кондиціонер від Deeply (щось зволожуюче або відновлюче)" linkUrl="https://deeply.com.ua/" image="/wishlist/spongebob/bath-3.png"/>
+				<Item name="deeply" text="Шампунь, кондиціонер від Deeply" linkUrl="https://deeply.com.ua/" image="/wishlist/spongebob/bath-3.png"/>
 
 				<Item name="tish" text="Кросівки від Tishelle" linkUrl="https://tishelle.com.ua/product-category/sneakers/" image="/wishlist/spongebob/shoes-2.jpg"/>
 
 				<Item name="giffard" text="<a target='_blank' href='https://winetime.com.ua/ua/giffard-abricot-du-roussillon?srsltid=AfmBOooWcupjiNFVT9RNi4uwmgIu1vG4u4IOMu9JGyuLZt3LNYZ_ohYP'>Лікер Giffard Abricot</a>" image="/wishlist/spongebob/drink.jpeg"/>
 
-				<Item name="trench" text="Чорний шкіряний тренч" image="/wishlist/spongebob/black.jpg"/>
+				<!-- <Item name="trench" text="Чорний шкіряний тренч" image="/wishlist/spongebob/black.jpg"/> -->
+
+				<BigItem title="Одяг"
+					image="/wishlist/spongebob/clot2.jpg" aftertext="Мої параметри: 91 - 74 - 101<br/>Зріст: 170">
+					<BigSubItem name="booriva" title="Booriva" link="" />
+					<BigSubItem name="booriva" title="Booriva" link="" />
+					<BigSubItem name="reserved" title="Светр з Reserved" link="https://www.reserved.com/ua/uk/ladies-sweater-427hi-02x" />
+					<BigSubItem name="cheburechna" title="Светр з надписом від cheburechna" link="https://www.instagram.com/cheburechna.ua/" />
+					<BigSubItem name="sport-siute" title="Спортивний комбез" link="https://lexie.com.ua/tproduct/533986576-564988142172-kombez-seams-long-v" />
+					<BigSubItem name="long" title="Лонг на запах" link="https://rikkyhype.com/ua/product/longsliv-zhinochij-z-dekolte-na-zapakh-grafitovij" />
+					<BigSubItem name="long-2" title="Лонг зі швам" link="https://rikkyhype.com/ua/product/longsliv-z-dekorativnimi-shvami-po-figuri-shokoladnij" />
+					<BigSubItem name="booriva" title="Спідниця від Booriva (сіра або чорна)" link="https://www.booriva.com/in-stock/spidnyczya-z-ryusheyu/" />
+					<BigSubItem name="trench" title="Чорний шкіряний тренч" />
+				</BigItem>
 
 				<BigItem title="Книжки" image="/wishlist/spongebob/book.jpg" >
-					<BigSubItem name="book-maid" title="Служниця (Фріда Мак-Фадден) <br/>(можна і наступні частини теж)" />
+					<BigSubItem name="book-mistery" title="Таємниці Великої Тиші (Сергій Пономаренко)" />
+					<BigSubItem name="book-reychel" title="Повернення Рейчел Прайс (Голлі Джексон)" />
 					<BigSubItem name="book-lie" title="Приховані малюнки (Джейсон Рекулак)" />
 					<BigSubItem name="book-first" title="Перша брехня виграє (Ешлі Елстон)" />
 					<BigSubItem name="book-god" title="Лісовий бог (Ліз Мур)" />
@@ -56,16 +70,8 @@ import Popup from '../components/Popup.astro';
 					<BigSubItem name="book-boss" title="Як убити свого боса. Посібник Мак-Мастера для вбивць (Руперт Голмс)" />
 					<BigSubItem name="book-lazarus" title="Лазарус (Світлана Тараторіна)" />
 					<BigSubItem name="book-lili" title="Чорні водяні лілії (Мішель Бюссі)" />
+					<BigSubItem name="book-maid" title="Служниця (Фріда Мак-Фадден) <br/>(можна і наступні частини теж)" />
 					<BigSubItem name="book-own" title="Тут усі хороші люди (Ешлі Флаверс)" />
-				</BigItem>
-
-				<BigItem title="Інші ідеї" image="/wishlist/spongebob/box.jpg" >
-					<BigSubItem name="cake" title="Тортик, тістечко, інші смаколики" />
-					<BigSubItem name="pijama" title="Естетік піжамка" />
-					<BigSubItem name="sport" title="Одяг в спортзал (комбінезончики, лосіни, топи, рашгарди і тд)" />
-					<BigSubItem name="quest" title="Все що повʼязано з квестами: квеструм, квест-коробка, саморобний квест і тд" />
-					<BigSubItem name="massage" title="Сертифікат на масаж" />
-					<BigSubItem name="house" title="Відпочинок в будиночку з чаном" />
 				</BigItem>
 
 				<BigItem title="Прикраси (срібло, біжутерія)" 
@@ -81,17 +87,27 @@ import Popup from '../components/Popup.astro';
 					<BigSubItem name="animalist" title="Animalist" link="https://animalism.shop/product-tag/jewelry-collection-lis-useredyni/" />
 				</BigItem>
 
+
+				<BigItem title="Інші ідеї" image="/wishlist/spongebob/box.jpg" >
+					<BigSubItem name="cake" title="Тортик, тістечко, інші смаколики" />
+					<BigSubItem name="pijama" title="Естетік піжамка" />
+					<BigSubItem name="sport" title="Одяг в спортзал (комбінезончики, лосіни, топи, рашгарди і тд)" />
+					<BigSubItem name="quest" title="Все що повʼязано з квестами: квеструм, квест-коробка, саморобний квест і тд" />
+					<BigSubItem name="massage" title="Сертифікат на масаж" />
+					<BigSubItem name="house" title="Відпочинок в будиночку з чаном" />
+				</BigItem>
+<!-- 
 				<BigItem title="Інший Одяг" subtitle="магазини що мені подобаються:" 
 					image="/wishlist/spongebob/clot2.jpg" aftertext="Мої параметри: 91 - 74 - 101<br/>Зріст: 170<br/>Взуття: 24.5см">
 					<BigSubItem name="booriva" title="Booriva" link="https://www.booriva.com/in-stock/" />
 					<BigSubItem name="hugme" title="Hugme" link="https://hugmebrand.com/" />
 					<BigSubItem name="fiore" title="13litera" link="https://www.instagram.com/13litera.ua/" />
 					<BigSubItem name="amos" title="Amoslook" link="https://www.instagram.com/amoslook/" />
-					<!-- <BigSubItem name="anve" title="Anvestudio" link="https://www.instagram.com/anvestudio/" /> -->
+					<BigSubItem name="anve" title="Anvestudio" link="https://www.instagram.com/anvestudio/" />
 					<BigSubItem name="flame" title="Flame of desire" link="https://www.instagram.com/flameofdesire.com.ua" />
 					<BigSubItem name="rikky" title="Rikky Hype" link="https://rikkyhype.com/ua" />
 					<BigSubItem name="gepur" title="Gepur" link="https://gepur.com/uk/" />
-				</BigItem>
+				</BigItem> -->
 			</div>
 		</div>
 		<Footer />

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(180deg, #75FCEB 0%, #75FCEB 300px, #038DDD 300px, #038DDD 100%);
+    background: linear-gradient(180deg, #9E2E96 0%, #9E2E96 300px, #b74b8a 300px, #b74b8a 100%);
 
 }
 
@@ -24,6 +24,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 20px; 
+    position: relative;
 
     @media (min-width: 900px) {
         height: 500px;
@@ -33,16 +34,28 @@ body {
     }
 }
 
+.banner-wrapper-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: invert(80%) sepia(30%) saturate(1000%) hue-rotate(300deg)
+          brightness(80%) contrast(55%);
+  z-index: 0;
+}
+
 .banner-main-text {
     height: 360px;
     font-size: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFE23E;
+    color: #edcfe4;
     padding: 20px;
     text-align: center;
     font-family: 'SomeTime';
+    z-index: 2;
+    position: relative;
 
 
     @media (min-width: 900px) {

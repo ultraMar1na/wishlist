@@ -1,7 +1,7 @@
 :root {
-    --main-bg-color: #0A7BCE;
+    --main-bg-color: #9E2E96;
     --main-text-color: #fff;
-    --secondary-text-color: #FFE23E;
+    --secondary-text-color: #fff;
     --secondary-bg-color: #ffffff33;
 }
 
@@ -314,14 +314,14 @@ footer {
 }
 .checkbox-wrapper .background,
 .mini-checkbox-wrapper .background {
-    fill: #ccc;
+    fill: #fff;
     transition: ease all 0.6s;
     -webkit-transition: ease all 0.6s;
 }
 .checkbox-wrapper .stroke,
 .mini-checkbox-wrapper .stroke {
     fill: none;
-    stroke: #fff;
+    stroke: #b74b8a;
     stroke-miterlimit: 10;
     stroke-width: 2px;
     stroke-dashoffset: 100;
@@ -333,7 +333,7 @@ footer {
 .mini-checkbox-wrapper .check,
 .checkbox-wrapper .check {
     fill: none;
-    stroke: #fff;
+    stroke: #b74b8a;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;

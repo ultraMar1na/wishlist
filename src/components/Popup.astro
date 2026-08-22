@@ -3,11 +3,13 @@ const {id='', content='', bannerType='', banner, confirmText = 'Підтверд
 var bannerImage = banner;
 
 if (!banner && bannerType === 'positive') {
-  bannerImage = `/wishlist/spongebob/happy/1.jpg`;
+  bannerImage = `/wishlist/twilight/happy.jpg`;
+  //bannerImage = `/wishlist/spongebob/happy/1.jpg`;
 }
 
 if (!banner && bannerType === 'negative') {
-  bannerImage = `/wishlist/spongebob/sad/1.jpg`;
+    bannerImage = `/wishlist/twilight/sad.jpg`;
+ // bannerImage = `/wishlist/spongebob/sad/1.jpg`;
 }
 ---
 
@@ -20,8 +22,8 @@ if (!banner && bannerType === 'negative') {
       <div class="dialog-footer">
         <p>{content}</p>
         <div class="dialog-actions">
-          <button class="confirm-button">{confirmText}</button>
-          <button class="cancel-button">{cancelText}</button>
+          <button class="confirm-button btn btn-reverse">{confirmText}</button>
+          <button class="cancel-button btn btn-reverse">{cancelText}</button>
         </div>
       </div>
     </div>

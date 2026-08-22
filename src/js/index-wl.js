@@ -71,7 +71,7 @@ function setCheckboxes() {
 function eventHandlers() {
     let items = document.querySelectorAll('.wishlist-item:not(.wide-item)');
     items.forEach(function(elem) {
-        elem.querySelector('.item-image img').addEventListener('click', (event) => {
+        elem.querySelector('button').addEventListener('click', (event) => {
             elem.querySelector('.checkbox-wrapper input').click();
         })
     });
@@ -118,13 +118,13 @@ function eventHandlers() {
 }
 
 function showPopup (popup) {
-    var popup = document.querySelector(popup),
-    img = popup.querySelector('img');
+    var popup = document.querySelector(popup);
+    // img = popup.querySelector('img');
 
-    if (img) {
-        const randomNum = Math.floor(Math.random() * 10) + 1;
-        img.src = img.src.replace(/\/\d+\.jpg$/, `/${randomNum}.jpg`);
-      }
+    // if (img) {
+    //     const randomNum = Math.floor(Math.random() * 10) + 1;
+    //     img.src = img.src.replace(/\/\d+\.jpg$/, `/${randomNum}.jpg`);
+    //   }
 
     popup.style.display = 'flex';
 }
@@ -134,48 +134,48 @@ function hidePopup (popup) {
     popup.style.display = 'none';  
 }
 
-const wrapper = document.getElementById('videoWrapper');
-const btn = document.getElementById('playBtn');
-const iframe = document.getElementById('ytFrame');
+// const wrapper = document.getElementById('videoWrapper');
+// const btn = document.getElementById('playBtn');
+// const iframe = document.getElementById('ytFrame');
 
-window.addEventListener('message', (e) => {
-    if (!e.data || typeof e.data !== 'string') return;
-    try {
-      const msg = JSON.parse(e.data);
-      // Check for video end
-      if (msg.event === 'onStateChange' && msg.info === 0) { // 0 = ended
-        hideVideo();
-      }
-    } catch {}
-  });
+// window.addEventListener('message', (e) => {
+//     if (!e.data || typeof e.data !== 'string') return;
+//     try {
+//       const msg = JSON.parse(e.data);
+//       // Check for video end
+//       if (msg.event === 'onStateChange' && msg.info === 0) { // 0 = ended
+//         hideVideo();
+//       }
+//     } catch {}
+//   });
 
-  // Load YT Player API (needed for postMessage control)
-  const tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  document.head.appendChild(tag);
+//   // Load YT Player API (needed for postMessage control)
+//   const tag = document.createElement('script');
+//   tag.src = "https://www.youtube.com/iframe_api";
+//   document.head.appendChild(tag);
 
-  // Create a player object when API ready
-  let player;
-  window.onYouTubeIframeAPIReady = () => {
-    player = new YT.Player('ytFrame');
-    console.log(player);
-  };
+//   // Create a player object when API ready
+//   let player;
+//   window.onYouTubeIframeAPIReady = () => {
+//     player = new YT.Player('ytFrame');
+//     console.log(player);
+//   };
 
-  btn.addEventListener('click', () => {
-    if (!player) return;
-    wrapper.style.display = 'block';
-    requestFullscreen(wrapper);
-    player.playVideo();
-  });
+//   btn.addEventListener('click', () => {
+//     if (!player) return;
+//     wrapper.style.display = 'block';
+//     requestFullscreen(wrapper);
+//     player.playVideo();
+//   });
 
-  function hideVideo() {
-    wrapper.style.display = 'none';
-    if (document.fullscreenElement) document.exitFullscreen();
-    player.stopVideo();
-  }
+//   function hideVideo() {
+//     wrapper.style.display = 'none';
+//     if (document.fullscreenElement) document.exitFullscreen();
+//     player.stopVideo();
+//   }
 
-  function requestFullscreen(el) {
-    if (el.requestFullscreen) el.requestFullscreen();
-    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-    else if (el.msRequestFullscreen) el.msRequestFullscreen();
-  }
+//   function requestFullscreen(el) {
+//     if (el.requestFullscreen) el.requestFullscreen();
+//     else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+//     else if (el.msRequestFullscreen) el.msRequestFullscreen();
+//   }

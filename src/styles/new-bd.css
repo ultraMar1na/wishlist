@@ -1,8 +1,11 @@
 :root {
-    --main-bg-color: #9E2E96;
-    --main-text-color: #fff;
+    --main-bg-color: #87424D;
+    --main-text-color: #000;
     --secondary-text-color: #fff;
-    --secondary-bg-color: #ffffff33;
+    --secondary-bg-color: #e3dbcb;
+    --dialog-bg-color: #66939a;
+    --dialog-text-color: #1F2526;
+    --secondary-bg-lighter: #F5F1E8;
 }
 
 .hero-content {
@@ -10,7 +13,8 @@
 }
 
 body {
-    font-family: 'ZCOOL XiaoWei', sans-serif;
+    font-family: "Lora", serif;
+    font-weight: normal;
     margin: 0;
     padding: 0;
     background-color: var(--secondary-bg-color);
@@ -22,11 +26,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     align-items: flex-start;
-    gap: 20px;
+    gap: 25px;
 
     @media (min-width: 500px) {
         grid-template-columns: 1fr 1fr;
-        gap: 25px;
     }
 
     @media (min-width: 900px) {
@@ -48,6 +51,18 @@ body {
 @media (min-width: 768px) {
     .wishlist-wrapper {
         padding: 120px 40px 120px;
+    }
+}
+
+.music-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+    margin-bottom: -60px;
+
+    @media (min-width: 768px) {
+        padding: 60px 40px 0;
+        margin-bottom: 0;
     }
 }
 
@@ -77,6 +92,7 @@ body {
     justify-content: center;
 
     order: 1;
+    height: 100%;
 }
 
 .wide-item {
@@ -119,46 +135,79 @@ body {
 }
 
 .wide-item .item-image img {
-    width: 80%;
+    width: 100%;
+    height: 180px;
 
     @media (min-width: 900px) {
-        width: 60%;
+        height: 270px;
     }
 
     @media (min-width: 1240px) {
-        width: 80%;
+        height: 430px;
     }
 }
 
 
 .item-image {
-    border: 4px solid var(--main-bg-color);
-    border-radius: 16px;
-    padding: 20px 20px 80px;
-    background-color: var(--secondary-bg-color);
-    cursor: pointer;
+    background-color: var(--secondary-bg-lighter);
     text-align: center;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
+    box-shadow: 8px 12px 30px var(--main-bg-color);
+    background: var(--secondary-bg-lighter);
+    display: flex;
+    flex-direction: column;
 }
 
 .item-image img {
-    width: 75%;
+    width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+     transform: scale(1);
 
     transition: transform 0.3s linear;
-    border-radius: 12px;
-
-    @media (min-width: 500px) {
-        width: 100%;
-    }
 }
 
 .item-image img:hover {
     transform: scale(1.1);
 }
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn  {
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: 0;
+    background: var(--main-text-color);
+    color: var(--secondary-bg-lighter);
+    padding: 12px;
+    border: 0;
+    font-size: 14px;
+    border: 2px solid var(--main-text-color);
+    transition-property: color, background-color;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .25s;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.btn:hover {
+    background: var(--secondary-bg-lighter);
+    color: var(--main-text-color);
+}
+
 
 a {
     color: var(--main-text-color);
@@ -181,23 +230,22 @@ a {
 }
 
 .item-text {
-    position: absolute;
     text-align: center;
-    bottom: 10px;
-    right: 20px;
-    left: 20px;
+    padding: 20px 16px 30px;
 
     font-size: 18px;
-
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media (min-width: 1240px) {
         font-size: 22px;
-        height: 80px;
+       // height: 80px;
     }
+}
+
+.item-text a {
+    text-decoration: none;
 }
 
 .item-text.has-tooltip {
@@ -268,16 +316,8 @@ footer {
     white-space: nowrap;
 }
 
-.checkbox-wrapper + label,
 .multiple-point label {
     cursor: pointer;
-}
-
-.wishlist-item .item-image:hover + .checkbox-wrapper .check,
-.checkbox-wrapper:hover .check,
-.mini-checkbox-wrapper:hover .check,
-.multiple-point label:hover .mini-checkbox-wrapper .check {
- stroke-dashoffset: 0;
 }
 
 .multiple-point li {
@@ -286,54 +326,36 @@ footer {
 }
 
 .mini-checkbox-wrapper {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     position: absolute;
     top: 1px;
-    left: -30px;
+    left: -34px;
 
     @media (min-width: 768px) {
         top: 0;
     }
 }
 
-.checkbox-wrapper {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 5;
-
-
-    @media (min-width: 1240px) {
-        width: 40px;
-        height: 40px;
-    }
-}
-.checkbox-wrapper .background,
 .mini-checkbox-wrapper .background {
-    fill: #fff;
+    fill: var(--secondary-bg-lighter);
     transition: ease all 0.6s;
     -webkit-transition: ease all 0.6s;
 }
-.checkbox-wrapper .stroke,
 .mini-checkbox-wrapper .stroke {
     fill: none;
-    stroke: #b74b8a;
+    stroke: #503a2c;
     stroke-miterlimit: 10;
     stroke-width: 2px;
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 0;
     stroke-dasharray: 100;
     transition: ease all 0.6s;
     -webkit-transition: ease all 0.6s;
 }
 
-.mini-checkbox-wrapper .check,
-.checkbox-wrapper .check {
+.mini-checkbox-wrapper .check {
     fill: none;
-    stroke: #b74b8a;
+    stroke: #503a2c;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
@@ -352,33 +374,16 @@ footer {
     height: 0;
 }
 
-.checkbox-wrapper input[type=checkbox] {
+.checkbox-wrapper {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 1px;
+    height: 1px;
     left: 0;
     top: 0;
     margin: 0;
     opacity: 0;
     -appearance: none;
     -webkit-appearance: none;
-}
-.mini-checkbox-wrapper input[type=checkbox]:hover,
-.checkbox-wrapper input[type=checkbox]:hover,
-.multiple-point li:hover {
-    cursor: pointer;
-}
-.mini-checkbox-wrapper input[type=checkbox]:checked + svg .background,
-.checkbox-wrapper input[type=checkbox]:checked + svg .background {
-    fill: var(--main-bg-color);
-}
-.mini-checkbox-wrapper input[type=checkbox]:checked + svg .stroke,
-.checkbox-wrapper input[type=checkbox]:checked + svg .stroke {
-    stroke-dashoffset: 0;
-}
-.mini-checkbox-wrapper input[type=checkbox]:checked + svg .check,
-.checkbox-wrapper input[type=checkbox]:checked + svg .check {
-    stroke-dashoffset: 0;
 }
 
 ul {
@@ -399,7 +404,7 @@ li.item-checked a {
     color: var(--main-bg-color);
     font-weight: bold;
     font-size: 28px;
-    line-height: 58px;
+    line-height: 80px;
 
     position: absolute;
     top: 0;
@@ -407,6 +412,121 @@ li.item-checked a {
     left: 0;
     bottom: 0;
     z-index: 1;
-    border-radius: 16px;
     background: rgba(169, 158, 162, 0.5);
 }
+
+.item-checked:not(.wide-item):not(li) button {
+    display: none;
+}
+
+
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 20;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-overlay .dialog-content {
+    background-color: var(--dialog-bg-color);
+    color: var(--dialog-text-color);
+    padding: 40px;
+    margin: 40px;
+    width: auto;
+    flex-grow: 1;
+    max-width: 90%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+        max-width: 800px;
+        flex-direction: row;
+    }
+}
+
+.dialog-overlay .btn {
+    background: var(--dialog-text-color);
+    color: var(--secondary-bg-lighter);
+    border: 2px solid var(--dialog-text-color);
+}
+
+.dialog-overlay .btn:hover {
+    color: var(--dialog-text-color);
+    background: var(--secondary-bg-lighter);
+}
+
+.dialog-overlay .dialog-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.dialog-footer {
+    font-size: 24px;
+
+    @media (min-width: 900px) {
+        font-size: 26px;
+    }
+}
+
+.item-text label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -11px;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

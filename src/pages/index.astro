@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import MainBannerBg from '../components/MainBannerBg.astro';
+import MainBanner from '../components/MainBanner.astro';
 import Item from '../components/Item.astro';
 import Skam from '../components/Skam.astro';
 import BigItem from '../components/BigItem.astro';
@@ -21,75 +21,85 @@ import Popup from '../components/Popup.astro';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<MainBannerBg text="Marynaʼs Wishlist" />
+		<MainBanner/>
 
 		<div class="wishlist-wrapper">
 			<div class="wishlist-grid">
-				<Item name="tosyo" text="Сумка Tosyo - TAG 1 або  TAG 2 або  W" image="/wishlist/spongebob/bags.jpg" linkUrl="https://www.instagram.com/p/DSUnoJRiryL/"/>
+				<Item name="foto" text="Парна фотосесія з Степанчиком (вмовити його обовʼязково)" image="/wishlist/twilight/photo.jpg"/>
 
-				<Item name="crocs" text="Крокси" image="/wishlist/spongebob/cros.jpg" showSize=true/>
+				<Item name="backpack" text="Рюкзак для авіаподорожей (напр. від Harvest з принтом 'Флора і Фауна' 'Хвоя')" image="/wishlist/twilight/backpack.jpg" linkUrl="https://harvest-clothing.com.ua/backpacks/?filter=2,4"/>
 
-				<!-- <Item name="cheburechna" text="Светр з надписом від cheburechna" showSize=true linkUrl="https://www.instagram.com/cheburechna.ua/" image="/wishlist/spongebob/sweather.jpg"/> -->
+				<Item name="tosyo" text="Сумка Tosyo W" linkUrl="https://www.instagram.com/p/DaC1OidKHub/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D" image="/wishlist/twilight/bag.png" />
 
-				<!-- <Item name="sport-siute" text="Спортивний комбез" showSize=true linkUrl="https://lexie.com.ua/tproduct/533986576-564988142172-kombez-seams-long-v" image="/wishlist/spongebob/suite.jpg"/> -->
-
-				<!-- <Item name="long-2" text="Лонг зі швами" showSize=true linkUrl="https://rikkyhype.com/ua/product/longsliv-z-dekorativnimi-shvami-po-figuri-shokoladnij" image="/wishlist/spongebob/zip.jpg"/> -->
-
-				<!-- <Item name="hammam" text="Гель для душу Hammam Mr.SCRUBBER" linkUrl="https://mrscrubber.ua/gel-dlia-dusu-hammam-mrscrubber" image="/wishlist/spongebob/bath-2.jpg"/> -->
-
-				<!-- <Item name="deeply" text="Шампунь, кондиціонер від Deeply" linkUrl="https://deeply.com.ua/" image="/wishlist/spongebob/bath-3.png"/> -->
-
-				<Item name="tish" text="Кросівки літні" showSize=true" image="/wishlist/spongebob/croc.jpg"/>
-
-				<!-- <Item name="giffard" text="<a target='_blank' href='https://winetime.com.ua/ua/giffard-abricot-du-roussillon?srsltid=AfmBOooWcupjiNFVT9RNi4uwmgIu1vG4u4IOMu9JGyuLZt3LNYZ_ohYP'>Лікер Giffard Abricot</a>" image="/wishlist/spongebob/drink.jpeg"/> -->
-
-				<Item name="giffard" text="Пазли Interdruk на 1000+ елементів" image="/wishlist/spongebob/puz.jpg"/>
+				<Item name="crocs" text="Блок Батончиків GoOn Energy Bar " image="/wishlist/twilight/apple.jpg" linkUrl="https://fit.rozetka.com.ua/ua/336528100/p336528100/"/>
 
 				<BigItem title="Одяг"
-					image="/wishlist/spongebob/clth.jpg" aftertext="Мої параметри: 92 - 74 - 101<br/>Зріст: 170">
-					<BigSubItem name="long-2" title="Червоний смугастий світшот з сердечком" link="https://www.instagram.com/p/DQLk5c6jNJl/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" />
-					<BigSubItem name="reserved" title="Світшот шампань серця" link="https://daryasoul.ua/product/sweatshirt-85" />
-					<BigSubItem name="cheburechna" title="Светр з надписом від cheburechna" link="https://www.instagram.com/cheburechna.ua/" />
-					<BigSubItem name="long" title="Худі романтика" link="https://www.booriva.com/in-stock/hudi-romantyka-na-gudzykah/" />
-					<BigSubItem name="booriva" title="Спідниця від Booriva чорна (або сіра)" link="https://www.booriva.com/in-stock/spidnyczya-z-ryusheyu-chorna/" />
-					<BigSubItem name="trench" title="Чорний шкіряний тренч" />
-					<BigSubItem name="sport-siute" title="Спортивний рашгард <a href='https://totalfit.com.ua/product/rw6-c36/' target='_blank'>Totalfit (зелений або чорний)</a> або <a href='https://rikkyhype.com/ua/product/rashgard-povnoyi-dovzhini-na-bliskavczi-bavovnyanij-asfaltovij' target='_blank'>Rikky Hype (асфальт або чорний)</a>" />
-					<BigSubItem name="sport" title="Чорні спортивні лосини" link="https://gs-active.com/copy_losyny-sportyvni-bezshovni-z-efektom-push-up-chorni-l-spring/5242/"/>
+					image="/wishlist/twilight/dress_2.jpg" aftertext="Мої параметри: 92 - 74 - 102<br/>Зріст: 170">
+					<!-- <BigSubItem name="long" title="Лонг Queen of Hearts ❤️" link="https://www.cultoni.com/products/%D0%BB%D0%BE%D0%BD%D0%B3-queen-of-hearts?variant=53029918966125" /> -->
+					<BigSubItem name="long-2" title="Лонг Queen Frog" link="https://www.cultoni.com/products/%D0%BB%D0%BE%D0%BD%D0%B3-queen-frog?variant=53030374244717" />
+					<BigSubItem name="booriva-1" title="Лонгслів Bambi" link="https://www.booriva.com/in-stock/longsliv-bambi/" />
+					<BigSubItem name="booriva-2" title="Світшот з подвійними рукавами" link="https://www.booriva.com/in-stock/svitshot-z-podvijnymy-rukavamy/" />
+					<BigSubItem name="booriva-3" title="Худі романтика" link="https://www.booriva.com/in-stock/hudi-romantyka-na-gudzykah-2/" />
+					<BigSubItem name="sport" title="Футболка «Естроген»" link="https://jotter-books.com/product/futbolka-estrogen/" />
+					<BigSubItem name="pijama" title="Шовкове домашнє кімоно в азійському стилі" />
+					<!-- <BigSubItem name="giffard" title="Файні шкарпетки (напр. dodo)" /> -->
 
 				</BigItem>
 
-				<BigItem title="Книжки" image="/wishlist/spongebob/book-2.jpg" >
-					<BigSubItem name="book-own" title="Сім чоловіків Евелін Г'юґо (Тейлор Дженкінс Рід)" />
-					<BigSubItem name="book-boss" title="Як убити свого боса. Посібник Мак-Мастера для вбивць (Руперт Голмс)" />
-					<BigSubItem name="book-maid" title="Секрет служниці, Служниця спостерігає, Весілля служниці (Фріда Мак-Фадден)  (першу частину я маю)" />
-					<BigSubItem name="book-lazarus" title="Книга Еміля (Іларіон Павлюк)" />
+				<BigItem title="Срібні прикраси" 
+					image="/wishlist/twilight/neckless.jpg" aftertext="Розміри колечок (+-):<br>Великий палець - 18.5,<br>Середній палець - 18.5,<br>Безіменний - 17.5">	
+					<BigSubItem name="dark" title="Сережки Dark" link="https://chuttyevo.com.ua/products/serezhky-dark" />	
+					<BigSubItem name="dark-2" title="Каблучка Dark" link="https://chuttyevo.com.ua/products/kabluchka-dark" />	
+					<BigSubItem name="vintage" title="Ланцюжок Вінтаж" link="https://chuttyevo.com.ua/products/lantsiuzhok-podviynyy-vintazh" />	
+					<BigSubItem name="kos" title="Сережки Колосся" link="https://chuttyevo.com.ua/products/serezhky-kolossia" />
+					<BigSubItem name="duhy" title="Сережки Дуги" link="https://chuttyevo.com.ua/products/serezhky-duhy" />
+					<BigSubItem name="32" title="Сережки-кільця" link="https://chuttyevo.com.ua/products/serezhky-kiltsia-32-mm" />
+					<BigSubItem name="youko" title="Youko Jewelry" link="https://www.instagram.com/youkojewelry?igsh=a3ZmanhnaXFmZXVo" />
+				</BigItem>
+
+				<BigItem title="Біжутерія" 
+					image="/wishlist/twilight/bracelet.jpg"
+					subtitle="речі/магазини що мені подобаються:">	
+					<BigSubItem name="choker" title="Чокер з річкових перлин" link="https://www.instagram.com/p/DYAInf9DcAn/?igsh=NHN5YnU4Yzg2aWpo" />
+					<BigSubItem name="choker-2" title="Чокер з зеленого нефриту" link="https://www.instagram.com/p/DX9VQ14jXhR/?igsh=ZGRjNnB3ZGY4Yjdi" />
+					<BigSubItem name="lamari" title="Lamari Jewelry" link="https://www.instagram.com/lamari_jewelry?igsh=MWQ1ejV4cGk0NmJuMA%3D%3D" />
+					<BigSubItem name="bridget" title="Bridget Stone" link="https://www.instagram.com/bridget_stone_?igsh=MWNuenZnOTF5dmpzaA%3D%3D" />
+				</BigItem>
+
+				<BigItem title="Косметика / Догляд" 
+					image="/wishlist/twilight/skin.png">	
+					<BigSubItem name="hammam" title="Гель для душу Hammam Mr.SCRUBBER" link="https://mrscrubber.ua/gel-dlia-dusu-hammam-mrscrubber" />
+					<BigSubItem name="krkr-1" title="Dr.Ceuracle Green Essential Set" link="https://krkr.com.ua/dr.ceuracle-green-essential-set-4-v-1/" />
+					<BigSubItem name="krkr-2" title="Needly pH Restore Skincare Essentials Set" link="https://krkr.com.ua/needly-ph-restore-skincare-essentials-3-v-1/" />
+					<BigSubItem name="krkr-3" title="Dr.Ceuracle Vegan Kombucha Beginning Set" link="https://krkr.com.ua/dr.ceuracle-vegan-kombucha-beginning-set-2-v-1/" />
+					<BigSubItem name="krkr-4" title="Dr.Ceuracle Vegan Active Berry Lip Oil" link="https://krkr.com.ua/dr.ceuracle-vegan-active-berry-lip-oil/" />
+					<BigSubItem name="krkr-5" title="Needly Vita C glow toning ampoule" link="https://krkr.com.ua/needly-vita-c-glow-toning-ampoule/" />
+					<BigSubItem name="krkr-6" title="Dr. Ceuracle Royal Vita Propolis 33 Ampoule" link="https://krkr.com.ua/drceuracle-royal-vita-propolis-30ml/" />
+				</BigItem>
+
+				<BigItem title="Книжки" image="/wishlist/twilight/book.jpg" >
+					<BigSubItem name="book-lili" title="Востаннє, коли я збрехала - Райлі Сейґер" />
+
+					<BigSubItem name="book-brunett" title="Файні брюнети та інша нечисть - Юлія Нагорнюк, Юлія Вус" />
+
+					<BigSubItem name="book-reychel" title="Убивчий холод - Кейт Еліс Маршалл" />
+					<BigSubItem name="book-boss" title="Блок D - Фріда Мак-Фадден" />
+					<BigSubItem name="book-own" title="В'язень - Фріда Мак-Фадден" />
+					<BigSubItem name="book-maid" title="Сім смертей Евелін Гардкасл - Стюарт Тертон" />
+					<BigSubItem name="book-lazarus" title="Надзвичайні розчарування Леопольда Беррі - Ріґґз Р." />
 					<BigSubItem name="book-mistery" title="Таємниці Великої Тиші (Сергій Пономаренко)" />
 					<BigSubItem name="book-lie" title="Приховані малюнки (Джейсон Рекулак)" />
-				</BigItem>
-
-				<BigItem title="Прикраси (срібло, біжутерія)" 
-				image="/wishlist/spongebob/jew.jpg"
-				subtitle="речі/магазини що мені подобаються:" aftertext="Розміри колечок (+-):<br>Великий палець - 18.5,<br>Середній палець - 18.5,<br>Безіменний - 17.5">	
-					<BigSubItem name="dych" title="Сережки Конго (напр. <a target='_blank' href='https://sribnakraina.ua/ua/sribni-serezhky-konho-se00608.html'>Сережки - Конго Срібна Країна</a> або <a target='_blank' href='https://oniks.ua/ua/products/12010as'>Сережки - кільця Oniks </a>)" />	
-					<BigSubItem name="heart" title="Колечко Heartbeat" link="https://sribnakraina.ua/ua/sribna-kabluchka-1928-1r.html" />	
-					<BigSubItem name="etno" title="Чокер Heartbeat" link="https://sribnakraina.ua/ua/sribny-choker-8185r.html" />	
-					<!-- <BigSubItem name="etno" title="etno.namystynka" link="https://www.instagram.com/etno.namystynka/" />	 -->
-					<BigSubItem name="minimalist" title="Minimalist Jewelry" link="https://instagram.com/minimalist_jewelry?igshid=OGQ5ZDc2ODk2ZA==" />
-					<!-- <BigSubItem name="dych" title="DYCH" link="https://danylevych.com/" /> -->
-					<BigSubItem name="bridget" title="Bridget Stone" link="https://www.instagram.com/bridget_stone_?igsh=MWNuenZnOTF5dmpzaA%3D%3D" />
-					<BigSubItem name="lamari" title="Lamari Jewelry" link="https://www.instagram.com/lamari_jewelry?igsh=MWQ1ejV4cGk0NmJuMA%3D%3D" />
-					<BigSubItem name="youko" title="Youko Jewelry" link="https://www.instagram.com/youkojewelry?igsh=a3ZmanhnaXFmZXVo" />
-					<!-- <BigSubItem name="animalist" title="Animalist" link="https://animalism.shop/product-tag/jewelry-collection-lis-useredyni/" /> -->
+					<BigSubItem name="book-last" title="Катабазис - Ребекка Кван" />
+					<BigSubItem name="book-god" title="Трон зі скла - Сара Маас" />
+					<BigSubItem name="book-first" title="Смерть у «Білому олені» - Кріс Чібнелл" />
 				</BigItem>
 
 
-				<BigItem title="Інші ідеї" image="/wishlist/spongebob/other.jpg" >
-					<!-- <BigSubItem name="cake" title="Тортик, тістечко, інші смаколики" /> -->
-					<BigSubItem name="pijama" title="Естетік піжамка" />
-					<!-- <BigSubItem name="sport" title="Одяг в спортзал (комбінезончики, лосіни, топи, рашгарди і тд)" /> -->
+				<BigItem title="Інші ідеї" image="/wishlist/twilight/cactus.jpg" >
 					<BigSubItem name="quest" title="Все що повʼязано з квестами: квеструм, квест-коробка, саморобний квест і тд" />
 					<BigSubItem name="massage" title="Сертифікат на масаж" />
-					<!-- <BigSubItem name="house" title="Відпочинок в будиночку з чаном" /> -->
+					<BigSubItem name="house" title="Відпочинок в будиночку з чаном" />
+					<BigSubItem name="cake" title="Щось з МІУМАУШОП" link="https://www.instagram.com/miumau.shop?igsh=MWsxb2k0YXRkc2k4MA==" />
 				</BigItem>
 <!-- 
 				<BigItem title="Інший Одяг" subtitle="магазини що мені подобаються:" 
@@ -98,12 +108,16 @@ import Popup from '../components/Popup.astro';
 					<BigSubItem name="hugme" title="Hugme" link="https://hugmebrand.com/" />
 					<BigSubItem name="fiore" title="13litera" link="https://www.instagram.com/13litera.ua/" />
 					<BigSubItem name="amos" title="Amoslook" link="https://www.instagram.com/amoslook/" />
-					<BigSubItem name="anve" title="Anvestudio" link="https://www.instagram.com/anvestudio/" />
 					<BigSubItem name="flame" title="Flame of desire" link="https://www.instagram.com/flameofdesire.com.ua" />
 					<BigSubItem name="rikky" title="Rikky Hype" link="https://rikkyhype.com/ua" />
 					<BigSubItem name="gepur" title="Gepur" link="https://gepur.com/uk/" />
 				</BigItem> -->
 			</div>
+		</div>
+		<div class="music-wrapper">
+			<iframe data-testid="embed-iframe" style="border-radius:12px" 
+			src="https://open.spotify.com/embed/playlist/3WiymrUO0lK60tbVWxtsPo?utm_source=generator&theme=0&si=3112fb68f76e4225" 
+			width="100%" height="1020" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		</div>
 		<Footer />
 

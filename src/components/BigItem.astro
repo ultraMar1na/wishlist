@@ -4,7 +4,9 @@ const { title = '', subtitle='', aftertext='', image = '' } = Astro.props;
 
 <div class="wishlist-item wide-item">
     <div class="item-image">
-        {image && <img src={image} alt={title} width="500" height="333"/>}
+        <div class="image-wrapper">
+            {image && <img src={image} alt={title} width="500" height="333"/>}
+        </div>
 
         <div class="item-text">
             <label>{title}</label>

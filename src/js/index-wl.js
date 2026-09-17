@@ -76,6 +76,13 @@ function eventHandlers() {
         })
     });
 
+    let itemsBig = document.querySelectorAll('.multiple-point li');
+    itemsBig.forEach(function(elem) {
+        elem.querySelector('button').addEventListener('click', (event) => {
+            elem.querySelector('.mini-checkbox-wrapper input').click();
+        })
+    });
+
     let inputs = document.querySelectorAll('.wishlist-item input.checkbox-gift'), isConfirmed;
     inputs.forEach(function(input) {
         input.addEventListener('change', (event) => {

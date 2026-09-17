@@ -3,16 +3,12 @@ const { name='', title='', link = '' } = Astro.props;
 ---
 
 <li>
-    <label for={`item-${name}`}>
-        <div class="mini-checkbox-wrapper">
+    <label for={`item-${name}`} class="big-subitem">
+        <div class="mini-checkbox-wrapper sr-only">
             <input type="checkbox" id={`item-${name}`} name={`item-${name}`} class="checkbox-gift"  />
-            <svg viewBox="0 0 35.6 35.6">
-                <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
-                <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
-                <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
-            </svg>
         </div>
         { link && <a href={link} target="_blank" set:html={title}></a>}
         { !link && <div set:html={title}></div>}
     </label>
+    <button class="btn">Забронювати</button>
 </li>

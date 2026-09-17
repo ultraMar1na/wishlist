@@ -320,21 +320,23 @@ footer {
     cursor: pointer;
 }
 
-.multiple-point li {
-    position: relative;
-    margin: 0 0 15px;
+.multiple-point .btn {
+    font-size: 12px;    
+    padding: 8px;
 }
 
-.mini-checkbox-wrapper {
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    top: 1px;
-    left: -34px;
+.multiple-point .item-checked .btn {
+    display: none;
+}
 
-    @media (min-width: 768px) {
-        top: 0;
-    }
+.multiple-point li {
+    position: relative;
+    margin: 0 0 8px;
+    padding: 0 0 8px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    border-bottom: 1px solid color-mix(in srgb, var(--main-bg-color) 40%, transparent);
 }
 
 .mini-checkbox-wrapper .background {
@@ -388,7 +390,7 @@ footer {
 
 ul {
     list-style-type: none;
-    padding-left: 40px;
+    padding: 0 24px;
 }
 
 li.item-checked label,

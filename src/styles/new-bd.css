@@ -323,6 +323,7 @@ footer {
 .multiple-point .btn {
     font-size: 12px;    
     padding: 8px;
+    margin-top: 0;
 }
 
 .multiple-point .item-checked .btn {
@@ -336,6 +337,7 @@ footer {
     display: flex;
     gap: 24px;
     justify-content: space-between;
+    align-items: flex-start;
     border-bottom: 1px solid color-mix(in srgb, var(--main-bg-color) 40%, transparent);
 }
 

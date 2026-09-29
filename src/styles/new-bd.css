@@ -168,6 +168,7 @@ body {
      transform: scale(1);
 
     transition: transform 0.3s linear;
+    background: var(--secondary-bg-color);
 }
 
 .item-image img:hover {
@@ -339,6 +340,10 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 1px solid color-mix(in srgb, var(--main-bg-color) 40%, transparent);
+}
+
+a.underline {
+    text-decoration: underline;
 }
 
 .mini-checkbox-wrapper .background {

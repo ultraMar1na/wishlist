@@ -3,7 +3,7 @@ const { name='', title='', link = '' } = Astro.props;
 ---
 
 <li>
-    <label for={`item-${name}`} class="big-subitem">
+    <div class="big-subitem">
         <div class="mini-checkbox-wrapper sr-only">
             <input type="checkbox" id={`item-${name}`} name={`item-${name}`} class="checkbox-gift"  />
         </div>

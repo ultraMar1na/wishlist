@@ -249,6 +249,10 @@ a {
     text-decoration: none;
 }
 
+.item-text a:hover {
+    text-decoration: underline;
+}
+
 .item-text.has-tooltip {
     padding-right: 28px;
 }

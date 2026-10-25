@@ -8,7 +8,7 @@ const { name='', title='', link = '' } = Astro.props;
             <input type="checkbox" id={`item-${name}`} name={`item-${name}`} class="checkbox-gift"  />
         </div>
         { link && <a href={link} target="_blank" set:html={title}></a>}
-        { !link && <div set:html={title}></div>}
-    </label>
+        { !link && <div class="item-title" set:html={title}></div>}
+    </div>
     <button class="btn">Забронювати</button>
 </li>

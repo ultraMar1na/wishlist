@@ -404,7 +404,7 @@ ul {
     padding: 0 24px;
 }
 
-li.item-checked label,
+li.item-checked .item-title,
 li.item-checked a {
     text-decoration: line-through;
     color: rgba(169, 158, 162);
